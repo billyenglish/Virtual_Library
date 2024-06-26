@@ -4,7 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Library</title>
+    <link rel="stylesheet" href="/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="/css/styles.css" type="text/css">
+    <script src="https://kit.fontawesome.com/9c98ae8183.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <header>
+        <div>
+            <h1 id="logo">Virtual Library</h1>
+        </div>
+        <div>
+            <button type="submit" class="add-book">Add Book</button>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="book-form">
+                <form>
+                    <h2>Add Book</h2>
+                    <input type="text" name="title" id="title">
+                    <input type="text" name="author" id="author">
+                    <input type="number" name="pages" id="pages">
+                    <div id="read-checkbox">
+                        <label for="read">Read</label>
+                        <input type="checkbox" name="read" id="read">
+                    </div>
+                    <div>
+                        <button>Submit</button>
+                        <button>Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright &copy; Billy English | Virtual Library</p>
+    </footer>
+    <script src="/js/script.js"></script>
 </body>
 </html>
