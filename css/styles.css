@@ -56,21 +56,78 @@ main {
 .container {
     display: grid;
     justify-content: center;
-    padding-top: 10rem;
 }
 
 /* Book Form */
 
+.book-form {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    padding-top: 12rem;
+}
+
 form {
+    border: 2px solid #232323;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
+    padding: 3rem;
+    border-radius: .4rem;
+    position: absolute;
+    background-color: #232323;
+    opacity: .95;
+}
+
+form h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #E74C3C;
+}
+
+input[type=text], input[type=number] {
+    min-height: 2.5rem;
+    min-width: 12rem;
+    font-size: 1.2rem;
+    letter-spacing: .2rem;
+    padding: .3rem;
 }
 
 #read-checkbox {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin: auto 0;
+    border: 2px solid orange;
+    width: 100%;
+    gap: 1rem;
+}
+
+#read-checkbox label {
+    font-size: 1.2rem;
+    color: #d3cccc;
+    padding: .3rem 0 0 0;
+}
+
+#read-chechkbox input[type=checkbox] {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+#form-button button {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: .25rem .5rem;
+    letter-spacing: .1rem;
+}
+
+#form-button {
+    display: flex;
+    gap: 1.5rem;
 }
 
 /* Footer Section */
@@ -82,7 +139,6 @@ footer {
     position: fixed;
     left: 0;
     bottom: 0;
-    border: 1px solid black;
     min-width: 100%;
     justify-content: center;
     background-color: #232323;
