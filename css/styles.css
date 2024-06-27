@@ -66,6 +66,7 @@ main {
     justify-content: center;
     width: 100%;
     padding-top: 12rem;
+    z-index: 10001;
 }
 
 form {
