@@ -6,8 +6,64 @@
     <title>Virtual Library</title>
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
     <link rel="stylesheet" href="./css/styles.css" type="text/css">
+    <link rel="icon" type="image/x-icon" href="/icons8-book-60.png">
     <script src="https://kit.fontawesome.com/9c98ae8183.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-book"></i>
+            Virtual Library
+        </div>
+
+        <div class="page-controls">
+            <div class="dark-mode light-mode">
+                <i class="fa-solid fa-moon"></i>
+            </div>
+
+            <div class="hamburger-menu">
+                <i class="fa-sharp fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="menu">
+            <div class="close">
+                <i class="fa-regular fa-circle-xmark"></i>
+            </div>
+
+            <h1>Virtual Library</h1>
+
+            <form>
+                <p>Add Book</p>
+                
+                <div>
+                    <input type="text" name="title" id="title" placeholder="Title">
+                </div>
+                <div>
+                    <input type="text" name="author" id="author" placeholder="Author">
+                </div>
+                <div>
+                    <input type="number" name="pages" id="pages" placeholder="Pages">
+                </div>
+                <div>
+                    <label id="read" for="read-book">Did you read book?
+                        <input type="checkbox" name="read-book" id="read-book">
+                    </label>
+                </div>
+                <div class="form-buttons">
+                    <button type="button">Cancel</button>
+                    <button type="button">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="book-shelf">
+            
+        </div>
+    </main>
+    <footer>
+
+    </footer>
 </body>
 </html>
