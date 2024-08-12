@@ -1,4 +1,139 @@
 @import url('https://fonts.googleapis.com/css2?family=Cambay:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+* {
+    margin: 0;
+    box-sizing: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-size: 62.5%;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    min-width: 100%;
+}
 
+/* Header Section */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 4.5rem;
+    z-index: 2;
+}
+
+.logo > i {
+    font-size: 1.75rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    font-size: 1.35rem;
+    font-weight: 550;
+    letter-spacing: .1rem;
+}
+
+.page-controls {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.fa-moon {
+    font-size: 1.25rem;
+    border: .15rem solid black;
+    padding: .5rem .75rem;
+    border-radius: 50%;
+}
+
+.hamburger-menu > i {
+    font-size: 1.75rem;
+    cursor: pointer;
+}
+
+/* Main Section */
+
+main {
+    z-index: 1;
+}
+
+.menu {
+    position: absolute;
+    border: 1px solid black;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    min-width: 24rem;
+    z-index: 5;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 110rem;
+}
+
+.close {
+    position: absolute;
+    font-size: 2rem;
+    left: 0;
+    margin: 2.5rem 0 0 1.25rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    font-weight: 500;
+    margin-top: 12rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 6rem 0 0 0;
+}
+
+form > p {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+    padding-bottom: 2.5rem;
+}
+
+form > div {
+    padding: 1.5rem 0;
+}
+
+input[type=text], input[type=number] {
+    height: 1.75rem;
+    min-width: 14rem;
+}
+
+input::placeholder {
+    font-size: 1.25rem;
+    letter-spacing: .2rem;
+    color: #000;
+}
+
+#read {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    gap: .25rem;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.form-buttons > button {
+    font-size: 1.25rem;
+    letter-spacing: .1rem;
+    padding: .25rem .5rem;
+}
