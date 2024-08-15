@@ -53,6 +53,7 @@ header {
     display: flex;
     justify-content: center;
     padding: 5rem 0;
+    z-index: 1;
 }
 
 /* Bookshelf */
@@ -65,9 +66,7 @@ header {
 
 /* Virtual Book */
 
-.book-art {
-    object-fit: cover;
-}
+
 
 .virtual-book {
     border: 1px solid #000;
@@ -201,9 +200,13 @@ footer {
 }
 
 footer p {
+    display: flex;
+    align-items: center;
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 550;
     letter-spacing: .2rem;
+    gap: .3rem;
+    z-index: 2;
 }
 
 .fa-github {
