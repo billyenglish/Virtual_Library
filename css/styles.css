@@ -39,11 +39,11 @@ header {
     font-size: 2rem;
 }
 
-.fa-moon {
+.fa-sun {
     display: none;
 }
 
-.fa-moon:hover, .fa-bars:hover {
+.fa-moon:hover, .fa-bars:hover, .fa-sun:hover, .fa-sun:hover {
     cursor: pointer;
 }
 
