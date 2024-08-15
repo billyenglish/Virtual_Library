@@ -9,7 +9,6 @@
 body {
     font-size: 62.5%;
     font-family: Poppins, Arial, Helvetica, sans-serif;
-    min-width: 100%;
 }
 
 /* Header Section */
@@ -18,162 +17,118 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2.5rem 4.5rem;
-    z-index: 2;
+    padding: 1.75rem 2rem;
 }
-
-.logo > i {
-    font-size: 1.75rem;
-}
-
-/* Header Logo */
 
 .logo {
     display: flex;
     align-items: center;
-    gap: .75rem;
-    font-size: 1.35rem;
+    font-size: 1.5rem;
     font-weight: 550;
     letter-spacing: .1rem;
+    gap: 1rem;
 }
 
-.page-controls {
+.logo i {
+    font-size: 1.75rem;
+}
+
+.header-controls {
     display: flex;
-    align-items: center;
-    gap: 1.25rem;
+    gap: 2rem;
+    font-size: 2rem;
 }
 
 .fa-moon {
-    font-size: 1.25rem;
-    border: .15rem solid black;
-    padding: .5rem .75rem;
-    border-radius: 50%;
+    display: none;
 }
 
-/* Hamburger Menu */
-
-.hamburger-menu > i {
-    font-size: 1.75rem;
+.fa-moon:hover, .fa-bars:hover {
     cursor: pointer;
 }
 
 /* Main Section */
 
-main {
-    z-index: 1;
-}
+/* Menu */
 
 .menu {
-    position: absolute;
-    border: 1px solid black;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    min-width: 24rem;
-    z-index: 5;
     display: none;
     flex-direction: column;
     align-items: center;
-    margin-left: 110rem;
-}
-
-/* Close Form Button */
-
-.close {
+    border: 1px solid black;
+    z-index: 2;
     position: absolute;
-    font-size: 2rem;
-    left: 0;
-    margin: 2.5rem 0 0 1.25rem;
+    padding: 1.5rem 2rem;
+    min-height: 100%;
+    right: 0;
+    top: 0;
 }
 
-h1 {
-    text-align: center;
-    font-size: 1.6rem;
+.menu-title {
+    font-size: 1.65rem;
     font-weight: 500;
-    letter-spacing: .2rem;
-    font-weight: 500;
-    margin-top: 12rem;
+    letter-spacing: .1rem;
+    margin-top: 8rem;
+    margin-bottom: 2.5rem;
 }
 
-/* Adding Book Form */
+.close-icon {
+    display: flex;
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+    font-size: 2.2rem;
+}
+
+.close-icon:hover {
+    cursor: pointer;
+}
 
 form {
     display: flex;
     flex-direction: column;
-    margin: 6rem 0 0 0;
-}
-
-form > p {
-    text-align: center;
-    font-size: 1.4rem;
-    font-weight: 400;
-    letter-spacing: .1rem;
-    padding-bottom: 2.5rem;
+    justify-content: center;
+    align-items: center;
 }
 
 form > div {
-    padding: 1.5rem 0;
+    padding: .75rem 0;
+}
+
+form > p {
+    font-size: 1.25rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.65rem;
 }
 
 input[type=text], input[type=number] {
-    height: 1.75rem;
-    min-width: 14rem;
+    min-height: 1.9rem;
+    min-width: 12rem;
 }
 
-input::placeholder {
-    font-size: 1.25rem;
+input[type=text]::placeholder, input[type=number]::placeholder {
+    font-size: 1.1rem;
     letter-spacing: .2rem;
     color: #000;
 }
 
-#read {
+#read-label {
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 1.1rem;
-    gap: .25rem;
+    gap: .5rem;
+    font-size: 1rem;
+    margin-top: 1rem;
 }
 
-/* Form Control Buttons */
-
-.form-buttons {
+.add-book-buttons {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
+    gap: 2.75rem;
+    padding-top: 1.95rem;
 }
 
-.form-buttons > button {
-    font-size: 1.25rem;
-    letter-spacing: .1rem;
-    padding: .25rem .5rem;
-}
-
-/* Virtual Book */
-
-.virtual-book {
-    border: 1px solid black;
-    max-width: 20rem;
-    border-radius: .35rem;
-    padding-left: 0rem 0 0rem 0rem;
-}
-
-.book-title {
-    font-size: 1.2rem;
+.add-book-buttons button {
+    font-size: 1.15rem;
     font-weight: 550;
-    letter-spacing: .1rem;
-    padding: .5rem 0;
-}
-
-.book-author {
-    font-size: 1.1rem;
-    font-weight: 500;
-    letter-spacing: .1rem;
-    padding: .5rem 0;
-}
-
-.page {
-    font-size: .9rem;
-    font-weight: 540;
-    letter-spacing: .1rem;
-    padding: .5rem 0;
+    padding: .25rem;
+    letter-spacing: .05rem;
 }
