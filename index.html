@@ -26,39 +26,75 @@
             </div>
         </div>
     </header>
-    <main>
-        <div class="menu">
-            <h2 class="menu-title">Virtual Library</h2>
-
-            <div class="close-icon">
-                <i class="fa-sharp fa-solid fa-xmark"></i>
+    <main class="library">
+        <section>
+            <div class="bookshelf">
+                <div class="virtual-book">
+                    <div class="book-art">
+                    </div>
+                    <h2 class="book-title">Fahrenheit 451</h2>
+                    <p class="author">By Ray Bradberry</p>
+                    <p class="pages">Pages: 281</p>
+                    <div class="book-controls">
+                        <button type="button">Remove</button>
+                        <button type="button">Read</button>
+                    </div>
+                </div>
+                <div class="virtual-book">
+                    <h2 class="book-title">Fahrenheit 451</h2>
+                    <p class="author">By Ray Bradberry</p>
+                    <p class="pages">Pages: 281</p>
+                    <div class="book-controls">
+                        <button type="button">Remove</button>
+                        <button type="button">Read</button>
+                    </div>
+                </div>
+                <div class="virtual-book">
+                    <h2 class="book-title">Fahrenheit 451</h2>
+                    <p class="author">By Ray Bradberry</p>
+                    <p class="pages">Pages: 281</p>
+                    <div class="book-controls">
+                        <button type="button">Remove</button>
+                        <button type="button">Read</button>
+                    </div>
+                </div>
             </div>
+        </section>
+        <section>
+            <div class="menu">
+                <h3 class="menu-title">Virtual Library</h3>
 
-            <form class="book-form">
-                <p>Add Book</p>
+                <div class="close-icon">
+                    <i class="fa-sharp fa-solid fa-xmark"></i>
+                </div>
 
-                <div>
-                    <input type="text" name="title" id="title" placeholder="Title">
+                <form class="book-form">
+                    <p>Add Book</p>
+
+                    <div>
+                        <input type="text" name="title" id="title" placeholder="Title">
+                    </div>
+                    <div>
+                        <input type="text" name="author" id="author" placeholder="Author">
+                    </div>
+                    <div>
+                        <input type="number" name="pages" id="pages" placeholder="Pages">
+                    </div>
+                    <div>
+                        <label id="read-label" for="read">Did you read book?
+                            <input type="checkbox" name="read" id="read">
+                        </label>
+                    </div>
+                    <div class="add-book-buttons">
+                        <button type="button">Cancel</button>
+                        <button type="button">Submit</button>
+                    </div>
                 </div>
-                <div>
-                    <input type="text" name="author" id="author" placeholder="Author">
-                </div>
-                <div>
-                    <input type="number" name="pages" id="pages" placeholder="Pages">
-                </div>
-                <div>
-                    <label id="read-label" for="read">Did you read book?
-                        <input type="checkbox" name="read" id="read">
-                    </label>
-                </div>
-                <div class="add-book-buttons">
-                    <button type="button">Cancel</button>
-                    <button type="button">Submit</button>
-                </div>
-            </div>
-        </form>
+            </form>
+        </section>
     </main>
     <footer>
+        <p>Copyright &copy; billyenglish <i class="fa-brands fa-github"></i></p>
     </footer>
     <script src="/js/script.js"></script>
 </body>
