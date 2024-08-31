@@ -4,6 +4,8 @@
     margin: 0;
     box-sizing: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
 }
 
 body {
@@ -17,19 +19,140 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 2.5rem;
+    padding: 1.75rem 3rem;
+    background-color: #1c1917;
+    color: #0ea5e9;
 }
 
 .logo {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: .2rem;
+}
+
+.logo p:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: ease-in-out 3s;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 100%;
+}
+
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-list {
+    display: flex;
     font-size: 1.5rem;
+    gap: 1rem;
 }
 
-.menu span {
-    font-size: 2rem;
+.nav-list a {
+    color: #0ea5e9;
 }
 
+.nav-list li:hover {
+    transform: scale(1.5);
+    transition: ease-in-out 3s;
+}
 
+.sign-in {
+    background-color: #0ea5e9;
+    border-color: #0ea5e9;
+    border-radius: .2rem;
+    color: #1c1917;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: .2rem;
+    padding: .15rem .35rem;
+}
 
 /* Main Section */
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem 0 1.15rem 0;
+}
+
+.add-book {
+    font-size: 1.1rem;
+    font-weight: 580;
+    letter-spacing: .1rem;
+    padding: .1rem .3rem;
+}
+
+/* Add Book Form */
+
+.form {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    background-color: #1c1917;
+    color: #0ea5e9;
+    opacity: .9;
+}
+
+form p {
+    font-size: 1.5rem;
+    font-weight: 575;
+    padding: 1rem 0 1.5rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+form div {
+    padding: .75rem;
+}
+
+form input[type=text], input[type=number] {
+    min-height: 2.25rem;
+    min-width: 12rem;
+}
+
+form input[type=text]::placeholder, input[type=number]::placeholder {
+    color: #1c1917;
+    font-size: 1.25rem;
+    font-weight: 550;
+    letter-spacing: .1rem;
+}
+
+.label-read {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .75rem;
+    font-size: 1rem;
+}
+
+.form-controls {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 1.25rem 0;
+}
+
+.form-controls button {
+    font-size: 1.25rem;
+    font-weight: 575;
+    color: #1c1917;
+    background-color: #0ea5e9;
+    padding: .15rem .35rem;
+    letter-spacing: .1rem;
+    border-radius: .3rem;
+    border: .2rem solid #1c1917;
+}
 
 /* Footer Section */
