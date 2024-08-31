@@ -34,8 +34,8 @@
         </div>
         <div class="bookshelf"></div>
 
-        <dialog>
-            <div class="form">
+        <dialog class="dialog" close>
+            <div>
                 <form>
                     <p>Add Book</p>
                     <div>
@@ -47,7 +47,7 @@
                     <div>
                         <input type="number" name="pages" id="pages" placeholder="Pages">
                     </div>
-                     <div>
+                    <div>
                         <label class="label-read" for="read">Have you this book?
                             <input type="checkbox" name="read" id="read">
                         </label>
@@ -59,11 +59,27 @@
                 </form>
             </div>
         </dialog>
+
+        <dialog class="dialog-userform" close>
+            <form class="user-form">
+                <p class="user-signin">Virtual Library</p>
+
+                <div>
+                    <input type="text" name="username" id="username" placeholder="Username">
+                </div>
+                <div>
+                    <input type="password" name="password" id="password" placeholder="Password">
+                </div>
+                <div class="user-control">
+                    <button class="clear-button" type="button">Clear</button>
+                    <button class="sigin-button" type="button">Sign In</button>
+                </div>
+            </form>
+        </dialog>
     </main>
     <footer>
     </footer>
     <script>
-        
     </script>
 </body>
 </html>
