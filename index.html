@@ -30,6 +30,9 @@
     </header>
     <main>
         <dialog class="dialog-signin" open>
+            <div class="close">
+                <i class="ri-close-line"></i>
+            </div>
             <form class="user-form">
                 <p>Virtual Library Log In</p>
                 <div>
@@ -39,8 +42,8 @@
                     <input type="password" name="password" id="password" placeholder="Password">
                 </div>
                 <div class="user-controls">
-                    <button type="button">Cancel</button>
-                    <button type="button">Submit</button>
+                    <button class="cancel-button" type="button">Cancel</button>
+                    <button class="submit-button" type="button">Submit</button>
                 </div>
             </form>
         </dialog>
@@ -50,9 +53,19 @@
     <script>
         const userSignIn = document.querySelector(".dialog-signin");
         const userSignInButton = document.querySelector(".sign-in");
+        const cancelButton = document.querySelector(".cancel-button");
+        const submitButton = document.querySelector(".submit-button");
 
         userSignInButton.addEventListener("click", () => {
             userSignIn.showModal();
+        });
+
+        cancelButton.addEventListener("click", () => {
+            alert("Cancel Button");
+        });
+
+        submitButton.addEventListener("click", () => {
+            alert("Submit Button");
         });
     </script>
 </body>
