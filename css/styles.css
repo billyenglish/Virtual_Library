@@ -21,7 +21,7 @@ header {
     justify-content: space-between;
     padding: 1.75rem 3rem;
     background-color: #1c1917;
-    color: #0ea5e9;
+    color: #ea580c;
 }
 
 .logo {
@@ -56,7 +56,7 @@ nav {
 }
 
 .nav-list a {
-    color: #0ea5e9;
+    color: #ea580c;
 }
 
 .nav-list li:hover {
@@ -82,8 +82,8 @@ nav {
 /* User Sign In */
 
 .sign-in {
-    background-color: #0ea5e9;
-    border-color: #0ea5e9;
+    background-color: #ea580c;
+    border-color: #ea580c;
     border-radius: .2rem;
     color: #1c1917;
     font-size: 1.1rem;
@@ -99,6 +99,17 @@ nav {
     margin: 0 auto;
     top: 15rem;
     border-radius: .5rem;
+    background-color: #1c1917;
+}
+
+.close {
+    color: #ea580c;
+    font-size: 1.5rem;
+    display: flex;
+    position: absolute;
+    right: 1;
+    top: 2;
+    font-weight: 500;
 }
 
 .user-controls {
@@ -109,9 +120,12 @@ nav {
 }
 
 .user-controls button {
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 1.1rem;
+    font-weight: 550;
     padding: .25rem .5rem;
+    background-color: #ea580c;
+    letter-spacing: .1rem;
+    border-radius: .3rem;
 }
 
 .user-form {
@@ -131,14 +145,17 @@ nav {
 }
 
 .user-form input::placeholder {
+    color: #1c1917;
     font-size: 1rem;
+    letter-spacing: .1rem;
 }
 
 .user-form p {
     font-size: 1.25rem;
     font-weight: 600;
     letter-spacing: .1rem;
-    padding: .75rem 0 1.25rem 0;
+    padding: 1.25rem 0 1.25rem 0;
+    color: #ea580c;
 }
 
 /* Footer Section */
