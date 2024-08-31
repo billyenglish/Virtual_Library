@@ -29,50 +29,18 @@
         </nav>
     </header>
     <main>
-        <div class="button-container">
-            <button class="add-book" type="button">Add Book</button>
-        </div>
-        <div class="bookshelf"></div>
-
-        <dialog class="dialog" close>
-            <div>
-                <form>
-                    <p>Add Book</p>
-                    <div>
-                        <input type="text" name="title" id="title" placeholder="Title">
-                    </div>
-                    <div>
-                        <input type="text" name="author" id="author" placeholder="Author">
-                    </div>
-                    <div>
-                        <input type="number" name="pages" id="pages" placeholder="Pages">
-                    </div>
-                    <div>
-                        <label class="label-read" for="read">Have you this book?
-                            <input type="checkbox" name="read" id="read">
-                        </label>
-                    </div>
-                    <div class="form-controls">
-                        <button class="clear" type="button">Clear</button>
-                        <button class="submit" type="button">Submit</button>
-                    </div>
-                </form>
-            </div>
-        </dialog>
-
-        <dialog class="dialog-userform" close>
+        <dialog class="dialog-signin" open>
             <form class="user-form">
-                <p class="user-signin">Virtual Library</p>
-
+                <p>Virtual Library Log In</p>
                 <div>
                     <input type="text" name="username" id="username" placeholder="Username">
                 </div>
                 <div>
                     <input type="password" name="password" id="password" placeholder="Password">
                 </div>
-                <div class="user-control">
-                    <button class="clear-button" type="button">Clear</button>
-                    <button class="sigin-button" type="button">Sign In</button>
+                <div class="user-controls">
+                    <button type="button">Cancel</button>
+                    <button type="button">Submit</button>
                 </div>
             </form>
         </dialog>
@@ -80,6 +48,12 @@
     <footer>
     </footer>
     <script>
+        const userSignIn = document.querySelector(".dialog-signin");
+        const userSignInButton = document.querySelector(".sign-in");
+
+        userSignInButton.addEventListener("click", () => {
+            userSignIn.showModal();
+        });
     </script>
 </body>
 </html>
