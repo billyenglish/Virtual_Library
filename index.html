@@ -29,23 +29,52 @@
         </nav>
     </header>
     <main>
-        <dialog class="dialog-signin" open>
-                <div class="close-signin">
-                        <i class="ri-close-line"></i>
+        <div class="button-container">
+            <button class="add-book" type="button">Add Book</button>
+        </div>
+        <dialog class="dialog-signin">
+            <div class="close-signin">
+                <i class="ri-close-line"></i>
+            </div>
+            <form class="user-form">
+                <p>Virtual Library Log In</p>
+                <div>
+                    <input type="text" name="username" id="username" placeholder="Username">
                 </div>
-                <form class="user-form">
-                    <p>Virtual Library Log In</p>
-                    <div>
-                        <input type="text" name="username" id="username" placeholder="Username">
-                    </div>
-                    <div>
-                        <input type="password" name="password" id="password" placeholder="Password">
-                    </div>
-                    <div class="user-controls">
-                        <button class="cancel-button" type="button">Cancel</button>
-                        <button class="submit-button" type="button">Submit</button>
-                    </div>
-                </form>
+                <div>
+                    <input type="password" name="password" id="password" placeholder="Password">
+                </div>
+                <div class="user-controls">
+                    <button class="cancel-button" type="button">Cancel</button>
+                    <button class="submit-button" type="button">Sign In</button>
+                </div>
+            </form>
+        </dialog>
+        <dialog class="dialog-bookform" open>
+            <div class="close-form">
+                <i class="ri-close-line"></i>
+            </div>
+            <form class="add-bookform">
+                <p>Add Book</p>
+                <div>
+                    <input type="text" name="title" id="title" placeholder="Title">
+                </div>
+                <div>
+                    <input type="text" name="author" id="author" placeholder="Author">
+                </div>
+                <div>
+                    <input type="number" name="pages" id="pages" placeholder="Pages">
+                </div>
+                <div>
+                    <label class="label-read" for="read">Did you read this book?
+                        <input type="checkbox" name="read" id="read">
+                    </label>
+                </div>
+                <div class="bookform-controls">
+                    <button class="cancel-button" type="button">Cancel</button>
+                    <button class="cancel-button" type="button">Submit</button>
+                </div>
+            </form>
         </dialog>
     </main>
     <footer>
@@ -57,12 +86,22 @@
         const submitButton = document.querySelector(".submit-button");
         const closeIcon = document.querySelector(".close-signin");
 
+        function clearForm() {
+            let userName = document.querySelector("#username");
+            let password = document.querySelector("#password");
+
+            userName.value = "";
+            password.value = "";
+
+            return;
+        }
+
         userSignInButton.addEventListener("click", () => {
             userSignIn.showModal();
         });
 
         cancelButton.addEventListener("click", () => {
-            alert("Cancel Button");
+            clearForm();
         });
 
         submitButton.addEventListener("click", () => {
