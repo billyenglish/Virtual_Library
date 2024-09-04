@@ -85,7 +85,7 @@ nav {
     padding: 1.25rem 0 1.15rem 0;
 }
 
-.add-book {
+#add-book {
     font-size: 1.1rem;
     font-weight: 600;
     letter-spacing: .1rem;
@@ -244,6 +244,43 @@ nav {
     padding: .2rem .3rem;
     background-color: #28b463;
     color:#283747
+}
+
+.virtual-book {
+    border: 1px solid black;
+    max-width: 16rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: .25rem;
+    padding: 1rem .5rem;
+}
+
+.virtual-book h2 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    padding: .5rem 0;
+    letter-spacing: .1rem;
+}
+
+.virtual-book h3 {
+    font-size: 1.2rem;
+    font-weight: 450;
+    padding: .5rem 0;
+}
+
+.virtual-book p {
+    font-size: 1rem;
+    font-weight: 400;
+    padding: .25rem 0;
+}
+
+.virtual-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid black;
+    width: 100%;
 }
 
 /* Footer Section */
