@@ -1,104 +1,91 @@
+/* Created Opening Sign In */
+
 const signIn = document.querySelector(".sign-in");
-const userSignIn = document.querySelector(".dialog-signin");
+const signinForm = document.querySelector(".dialog-signin");
+
+signIn.addEventListener("click", openSignIn);
+
+function openSignIn() {
+    signinForm.showModal();
+}
+
+/* Created Closing Sign In */
+
 const closeSignIn = document.querySelector(".close-signin");
-const username = document.querySelector("#username");
-const password = document.querySelector("#password");
-const addBook = document.querySelector("#add-book");
-const dialogBookForm = document.querySelector(".dialog-bookform");
-const closeBookForm = document.querySelector(".close-form");
-const cancelSignIn = document.querySelector("#cancel-signin");
-const cancelBookForm = document.querySelector("#cancel-bookform");
-const bookTitle = document.querySelector("#title")
-const bookAuthor = document.querySelector("#author");
-const numberOfPages = document.querySelector("#pages");
-const readBook = document.querySelector("#read");
-const submitBook = document.querySelector("#submit-bookform");
-const bookshelf = document.querySelector("#bookshelf");
 
-/* User Sign In Button Opens User Sign In Form */
+closeSignIn.addEventListener("click", closeSignInForm);
 
-signIn.addEventListener("click", signInForm);
-
-function signInForm() {
-    userSignIn.showModal();
+function closeSignInForm() {
+    signinForm.close();
 }
 
-/* Close User Sign In Form */
+/* Clear User Sign In Form */
 
-closeSignIn.addEventListener("click", closeUserSignInForm); 
+const clearSignIn = document.querySelector("#cancel-signin");
+const usernameInput = document.querySelector("#username");
+const passwordInput = document.querySelector("#password");
 
-function closeUserSignInForm() {
-    userSignIn.close();
-    clearUserSignInForm();
-}
+clearSignIn.addEventListener("click", clearSignInForm);
 
-/* Cancel User Sign In */
-
-function clearUserSignInForm() {
-
-    username.value = "";
-    password.value = "";
+function clearSignInForm() {
+    usernameInput.value = "";
+    passwordInput.value = "";
+    signinForm.close();
 
     return;
 }
 
-cancelSignIn.addEventListener("click", clearUserSignInForm);
+/* Opening Book Form */
 
-/* Open Virtual Book Form */
+const addBook = document.querySelector("#add-book");
+const openBookForm = document.querySelector(".dialog-bookform");
 
-function openBookForm() {
-    dialogBookForm.showModal();
+addBook.addEventListener("click", toggleBookForm);
+
+function toggleBookForm() {
+    openBookForm.showModal();
 }
 
-addBook.addEventListener("click", openBookForm);
+/* Close Book Form */
 
-/* Close Virtual Book Form */
+const closeForm = document.querySelector(".close-form");
+const bookForm = document.querySelector(".dialog-bookform");
 
-function closeBook() {
-    dialogBookForm.close();
+closeForm.addEventListener("click", closeBookForm);
+
+function closeBookForm() {
+    bookForm.close();
 }
 
-closeBookForm.addEventListener("click", closeBook);
+/* Clear Book Form */
 
-/* Clear Virtual Book Form */
+const bookTitle = document.querySelector("#title");
+const bookAuthor = document.querySelector("#author");
+const bookPages = document.querySelector("#pages");
+const bookIsRead = document.querySelector("#read");
+const cancelBookForm = document.querySelector("#cancel-bookform");
 
-function clearBookForm() {
+cancelBookForm.addEventListener("click", cancelBookFormToggle);
+
+function cancelBookFormToggle() {
     bookTitle.value = "";
     bookAuthor.value = "";
-    numberOfPages.value = "";
-    readBook.checked = "";
-
-    return;
+    bookPages.value = "";
+    bookIsRead.checked = false;
+    bookForm.close();
 }
 
-/* Cancel Book Form */
-
-cancelBookForm.addEventListener("click", clearBookForm);
-
-/* Create Virtual Book */
+/* Creating Library */
 
 const myLibrary = [];
 
-function Book(title, author, book, read) {
+function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
-    this.book = book;
+    this.pages = pages;
     this.read = read;
 }
 
-function addBookToLibrary() {
-    let createTitle = bookTitle.value;
-    let createAuthor = bookAuthor.value;
-    let createBookPages = numberOfPages.value;
-    let createReadBook = readBook.value;
+function addToLibrary() {
 
-    const createBook = new Book(createTitle, createAuthor, createBookPages, createReadBook);
-
-    myLibrary.push(createBook);
-
-    console.log(myLibrary);
 }
-
-console.log(addBookToLibrary())
-
-submitBook.addEventListener("click", addBookToLibrary);
