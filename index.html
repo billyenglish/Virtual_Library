@@ -30,7 +30,7 @@
     </header>
     <main>
         <div class="button-container">
-            <button class="add-book" type="button">Add Book</button>
+            <button id="add-book" type="button">Add Book</button>
         </div>
         <dialog class="dialog-signin">
             <div class="close-signin">
@@ -63,7 +63,7 @@
                     <input type="text" name="author" id="author" placeholder="Author">
                 </div>
                 <div>
-                    <input type="number" name="pages" id="pages" placeholder="Pages">
+                    <input type="number" name="pages" id="pages" min="1" placeholder="Pages">
                 </div>
                 <div>
                     <label class="label-read" for="read">Did you read this book?
@@ -79,59 +79,6 @@
     </main>
     <footer>
     </footer>
-    <script>
-        const userSignIn = document.querySelector(".dialog-signin");
-        const userSignInButton = document.querySelector(".sign-in");
-        const cancelButton = document.querySelector(".cancel-button");
-        const submitButton = document.querySelector(".submit-button");
-        const closeIcon = document.querySelector(".close-signin");
-        const addBook = document.querySelector(".add-book");
-        const bookForm = document.querySelector(".dialog-bookform");
-        const closeForm = document.querySelector(".close-form");
-        const bookTitle = document.querySelector("#title");
-        const bookAuthor = document.querySelector("#author");
-        const bookPages = document.querySelector("#pages");
-        const readBook = document.querySelector("#read");
-
-        function clearForm() {
-            let userName = document.querySelector("#username");
-            let password = document.querySelector("#password");
-
-            userName.value = "";
-            password.value = "";
-
-            return;
-        }
-
-        function clearBookForm () {
-            bookTitle.value = "";
-            bookAuthor.value = "";
-        }
-
-        closeForm.addEventListener("click", () => {
-            bookForm.close();
-        });
-
-        addBook.addEventListener("click", () => {
-            bookForm.showModal();
-            clearBookForm();
-        });
-
-        userSignInButton.addEventListener("click", () => {
-            userSignIn.showModal();
-        });
-
-        cancelButton.addEventListener("click", () => {
-            clearForm();
-        });
-
-        submitButton.addEventListener("click", () => {
-            alert("Submit Button");
-        });
-
-        closeIcon.addEventListener("click", () => {
-            userSignIn.close();
-        });
-    </script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
