@@ -1,45 +1,16 @@
-class Book {
-    constructor(title, author, pages, read) {
-        this.title = title;
-        this.author = author;
-        this.pages = pages;
-        this.read = read;
-    }
+/* User Sign In Form Open and Closing Form */
 
-    bookTitle() {
-        return this.title === "" ? "Please Enter A Book Title" : this.title;
-    }
+const signInButton = document.querySelector("#sign-in");
+const signInModal = document.querySelector(".dialog-signin");
+const closeSignIn = document.querySelector(".close-signin");
 
-    bookAuthor() {
-        return this.author === "" ? "Please Enter A Book Author" : this.author;
-    }
+const openUserSignIn = () => signInModal.showModal();
 
-    bookPages() {
-        return this.pages > 0 ? "Please Valid Number of Book Pages" : this.pages;
-    }
+signInButton.addEventListener("click", openUserSignIn);
 
-    isRead() {
-        return this.read;
-    }
+const closeUserSignIn = () => {
+    signInModal.close();
 }
 
-const myLibrary = [];
+closeSignIn.addEventListener("click", closeUserSignIn);
 
-function addToLibrary(bookTitle, bookAuthor, bookPages, bookIsRead) {
-    let createBook = new Book(bookTitle, bookAuthor, bookPages, bookIsRead);
-    myLibrary.push(createBook);
-    return myLibrary;
-}
-
-function createBook() {
-    let result = addToLibrary('Title', 'Author', 'Pages', 'isRead');
-
-    result.forEach(book => {
-        console.log(book.bookTitle());
-        console.log(book.bookAuthor());
-        console.log(book.bookPages());
-        console.log(book.isRead());
-    })
-;}
-
-console.log(createBook());
