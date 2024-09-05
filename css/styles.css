@@ -64,7 +64,7 @@ nav {
     transition: ease-in-out 3s;
 }
 
-.sign-in {
+#sign-in {
     background-color: #28b463;
     border-color: #283747;
     border-radius: .2rem;
