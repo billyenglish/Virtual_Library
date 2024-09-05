@@ -16,5 +16,15 @@ closeSignIn.addEventListener("click", closeUserSignIn);
 
 /* Add Book Form for Open and close function */
 
-const addBookButton = document.querySelector("")
+const addBookButton = document.querySelector("#add-book");
+const addBookForm = document.querySelector(".dialog-bookform");
+const closeBookForm = document.querySelector(".close-form");
+
+addBookButton.addEventListener("click", () => {
+    addBookForm.showModal();
+});
+
+closeBookForm.addEventListener("click", () => {
+    addBookForm.close();
+})
 
