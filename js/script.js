@@ -1,10 +1,21 @@
+const userInputs = document.querySelectorAll("input");
+
+const clearUserInput = (inputs) => {
+    inputs.forEach((input) => {
+        inputs.
+    });
+}
+
 /* User Sign In Form Open and Closing Form */
 
 const signInButton = document.querySelector("#sign-in");
 const signInModal = document.querySelector(".dialog-signin");
 const closeSignIn = document.querySelector(".close-signin");
+const userInput = document.querySelector('input');
 
-const openUserSignIn = () => signInModal.showModal();
+const openUserSignIn = () => {
+    signInModal.showModal();
+}
 
 signInButton.addEventListener("click", openUserSignIn);
 
