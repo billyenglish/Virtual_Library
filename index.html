@@ -39,10 +39,10 @@
             <form class="user-form">
                 <p>Virtual Library Log In</p>
                 <div>
-                    <input type="text" name="username" id="username" placeholder="Username">
+                    <input type="text" name="username" id="username" placeholder="Username" required>
                 </div>
                 <div>
-                    <input type="password" name="password" id="password" placeholder="Password">
+                    <input type="password" name="password" id="password" placeholder="Password" required>
                 </div>
                 <div class="user-controls">
                     <button id="cancel-signin" type="button">Cancel</button>
@@ -57,13 +57,13 @@
             <form class="add-bookform">
                 <p>Add Book</p>
                 <div>
-                    <input type="text" name="title" id="title" placeholder="Title">
+                    <input type="text" name="title" id="title" placeholder="Title" required>
                 </div>
                 <div>
-                    <input type="text" name="author" id="author" placeholder="Author">
+                    <input type="text" name="author" id="author" placeholder="Author" required>
                 </div>
                 <div>
-                    <input type="number" name="pages" id="pages" min="1" placeholder="Pages">
+                    <input type="number" name="pages" id="pages" min="1" placeholder="Pages" required>
                 </div>
                 <div>
                     <label class="label-read" for="read">Did you read this book?
