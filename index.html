@@ -11,8 +11,59 @@
     <script src="https://kit.fontawesome.com/9c98ae8183.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Virtual Library</h1>
+            </div>
+
+            <div class="nav-right">
+                <div>
+                    <ul class="nav-list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="sign-in">
+                    <button type="button">Sign In</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="create-book">
+            <button id="create-book" type="button">Create Book</button>
+        </div>
+        <dialog id="dialog">
+            <form>
+                <h4>Add Book</h4>
+
+                <div>
+                    <input type="text" name="title" id="title" placeholder="Title" required>
+                </div>
+                <div>
+                    <input type="text" name="author" id="author" placeholder="Author" required>
+                </div>
+                <div>
+                    <input type="number" name="pages" id="pages" placeholder="Pages" required>
+                </div>
+                <div>
+                    <label id="label-read" for="read">Did you read this book?
+                        <input type="checkbox" name="read" id="read">
+                    </label>
+                </div>
+                <div class="bookform-controls">
+                    <button type="button">Cancel</button>
+                    <button type="button">Submit</button>
+                </div>
+            </form>
+        </dialog>
+    </main>
+    <footer>
+        <p>Copyright &copy; billyenglish <i class="fa-brands fa-github"></i></p>
+    </footer>
+    <script src="./script.js"></script>
 </body>
 </html>
