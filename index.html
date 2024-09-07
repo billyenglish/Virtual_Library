@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
     <link rel="stylesheet" href="./css/styles.css" type="text/css">
     <link rel="icon" type="image/x-icon" href="image/icons8-book-60.png">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9c98ae8183.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -36,7 +36,10 @@
         <div class="create-book">
             <button id="create-book" type="button">Create Book</button>
         </div>
-        <dialog id="dialog">
+        <dialog id="dialog" open>
+            <div class="close-bookform">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
             <form>
                 <h4>Add Book</h4>
 
@@ -60,10 +63,15 @@
                 </div>
             </form>
         </dialog>
+        <div id="bookshelf">
+            <div class="virtual-book">
+
+            </div>
+        </div>
     </main>
     <footer>
         <p>Copyright &copy; billyenglish <i class="fa-brands fa-github"></i></p>
     </footer>
-    <script src="./script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
