@@ -77,7 +77,13 @@ class Book {
 const myLibrary = [];
 
 const addBookToLibrary = () => {
+    let book = new Book('The Hobbit', 'J.K Rawlings', 454, true);
+    myLibrary.push(book);
+    return myLibrary;
+}
 
+const newBook = function () {
+    
 }
 
 
