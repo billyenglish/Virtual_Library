@@ -3,75 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtual Library</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
-    <link rel="stylesheet" href="./css/styles.css" type="text/css">
-    <link rel="icon" type="image/x-icon" href="image/icons8-book-60.png">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
     <script src="https://kit.fontawesome.com/9c98ae8183.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="nav">
             <div class="logo">
-                <h1>Virtual Library</h1>
+                <h1><span class="logo-one">Virtual</span> <span class="logo-two">Library</span></h1>
             </div>
+            
+            <div class="right-nav">
+                <ul class="nav-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
 
-            <div class="nav-right">
-                <div>
-                    <ul class="nav-list">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">About</a></li>
-                    </ul>
-                </div>
-
-                <div class="sign-in">
-                    <button type="button">Sign In</button>
+                <div class="add-book">
+                    <button id="add-book" type="button">Add Book</button>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <div class="create-book">
-            <button id="create-book" type="button">Create Book</button>
-        </div>
-        <dialog id="dialog">
-            <div class="close-bookform">
-                <i class="fa-solid fa-xmark"></i>
-            </div>
-            <form>
-                <h4>Add Book</h4>
-
-                <div>
-                    <input type="text" name="title" id="title" placeholder="Title" required>
-                </div>
-                <div>
-                    <input type="text" name="author" id="author" placeholder="Author" required>
-                </div>
-                <div>
-                    <input type="number" name="pages" id="pages" placeholder="Pages" required>
-                </div>
-                <div>
-                    <label id="label-read" for="read">Did you read this book?
-                        <input type="checkbox" name="read" id="read">
-                    </label>
-                </div>
-                <div class="bookform-controls">
-                    <button id="cancel" type="button">Cancel</button>
-                    <button id="submit" type="button">Submit</button>
-                </div>
-            </form>
-        </dialog>
         <div id="bookshelf">
             <div class="virtual-book">
-
+                <h2 class="book-title">Fahrenheit 451</h2>
+                <h3 class="book-author">By: Ray Bradbury</h3>
+                <p class="book-pages">Pages: 282</p>
+                <div class="book-controls">
+                    <button>Delete</button>
+                    <button>Read</button>
+                </div>
             </div>
         </div>
     </main>
     <footer>
-        <p>Copyright &copy; billyenglish <i class="fa-brands fa-github"></i></p>
+        <p>Copyright &copy; Billy English <i class="fa-brands fa-github"></i></p>
     </footer>
-    <script src="./js/script.js"></script>
 </body>
 </html>
