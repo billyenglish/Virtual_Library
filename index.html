@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Virtual Library</title>
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
     <script src="https://kit.fontawesome.com/9c98ae8183.js" crossorigin="anonymous"></script>
@@ -14,7 +14,7 @@
             <div class="logo">
                 <h1><span class="logo-one">Virtual</span> <span class="logo-two">Library</span></h1>
             </div>
-            
+
             <div class="right-nav">
                 <ul class="nav-list">
                     <li><a href="#">Home</a></li>
@@ -36,14 +36,41 @@
                 <h3 class="book-author">By: Ray Bradbury</h3>
                 <p class="book-pages">Pages: 282</p>
                 <div class="book-controls">
-                    <button>Delete</button>
+                    <button type="">Delete</button>
                     <button>Read</button>
                 </div>
             </div>
         </div>
+        <dialog id="dialog">
+            <form>
+                <div class="close-form">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <h4>Add Book</h4>
+                <div>
+                    <input type="text" name="title" id="title" placeholder="Title">
+                </div>
+                <div>
+                    <input type="text" name="author" id="author" placeholder="Author">
+                </div>
+                <div>
+                    <input type="number" name="pages" id="pages" placeholder="Pages">
+                </div>
+                <div>
+                    <label id="label-read" for="read">Did you read this book?
+                        <input type="checkbox" name="read" id="read">
+                    </label>
+                </div>
+                <div class="form-controls">
+                    <button type="button">Cancel</button>
+                    <button type="button">Submit</button>
+                </div>
+            </form>
+        </dialog>
     </main>
     <footer>
         <p>Copyright &copy; Billy English <i class="fa-brands fa-github"></i></p>
     </footer>
+    <script src="./js/script.js"></script>
 </body>
 </html>
