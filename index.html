@@ -36,7 +36,7 @@
                 <h3 class="book-author">By: Ray Bradbury</h3>
                 <p class="book-pages">Pages: 282</p>
                 <div class="book-controls">
-                    <button type="button">Delete</button>
+                    <button class="delt" type="button">Delete</button>
                     <button type="button">Read</button>
                 </div>
             </div>
@@ -48,17 +48,14 @@
                 </div>
                 <h4>Add Book</h4>
                 <div>
-                    <input type="text" name="title" id="title" placeholder="Title">
+                    <input type="text" name="title" id="title" placeholder="Title" required>
                 </div>
-                <div class="title-err err"></div>
                 <div>
-                    <input type="text" name="author" id="author" placeholder="Author">
+                    <input type="text" name="author" id="author" placeholder="Author" required>
                 </div>
-                <div class="author-err err"></div>
                 <div>
-                    <input type="number" name="pages" id="pages" placeholder="Pages">
+                    <input type="number" name="pages" id="pages" placeholder="Pages" required>
                 </div>
-                <div class="pages-err err"></div>
                 <div>
                     <label id="label-read" for="read">Did you read this book?
                         <input type="checkbox" name="read" id="read">
