@@ -5,8 +5,8 @@ const bookTitle = document.querySelector("#title");
 const bookAuthor = document.querySelector("#author");
 const bookPages = document.querySelector("#pages");
 const bookRead = document.querySelector("#read");
-const bookShelf = document.querySelector("#bookshelf");
 const closeIcon = document.querySelector(".close-form")
+const bookShelf = document.querySelector("#bookshelf");
 const cancelButton = document.querySelector("#cancel");
 
 const openBookForm = () => {
@@ -27,50 +27,49 @@ closeIcon.addEventListener("click", clearBookForm);
 cancelButton.addEventListener("click", clearBookForm);
 
 class Book {
-    constructor(title, author, pages, read) {
+    constructor(title, author, pages, isRead) {
         this.title = title;
         this.author = author;
         this.pages = pages;
-        this.read = read;
-    }
-
-    isTitle() {
-    }
-
-    isAuthor() {
-    }
-
-    isPages() {
-    }
-
-    isRead() {
+        this.isRead = isRead;
     }
 }
 
 const myLibrary = [];
 
-function addBookToLibrary(title, author, pages, read) {
-    let book = new Book(title, author, pages, read);
-    myLibrary.push(book);
+function addBookToLibrary() {
+    let newBook = new Book(bookTitle.value, bookAuthor.value, bookPages.value, bookRead.checked);
+    myLibrary.push(newBook);
     return myLibrary;
 }
 
-function invalidEntry() {
-}
-
 function createBook() {
-    let newBook = addBookToLibrary(title, author, pages, read);
+    let getBook = addBookToLibrary();
 
-    newBook.forEach(book => {
-        console.log(book);
-    })
+    getBook.forEach((book) => {
+        const createBook = document.createElement("div");
+        createBook.classList.add("virtual-book");
+        createBook.innerHTML = `
+            <h2 class="book-title">${book.title}</h2>
+            <h3 class="book-author">By: ${book.author}</h3>
+            <p class="book-pages">Pages: ${book.pages}</p>
+            <div class="book-controls">
+                <button class="delete" type="button">Delete</button>
+                <button class="read" type="button">${book.isRead ? "Read" : "Not Read"}</button>
+            </div>
+        `;
+        bookShelf.appendChild(createBook);
+    });
 }
 
-const submitButton = document.querySelector('#submit');
+const submitButton = document.querySelector("#submit");
 
 submitButton.addEventListener("click", (e) => {
     e.preventDefault();
-    addBookToLibrary(`${bookTitle.value}`, `${bookAuthor.value}`, `${bookPages.value}`, `${bookRead.checked}`);
     createBook();
+    clearBookForm();
 });
+
+
+
 
