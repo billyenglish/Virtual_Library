@@ -39,24 +39,28 @@ const myLibrary = [];
 
 function addBookToLibrary() {
     let newBook = new Book(bookTitle.value, bookAuthor.value, bookPages.value, bookRead.checked);
-    myLibrary.push(newBook);
-    return myLibrary;
+    if (bookTitle.value !== "" && bookAuthor.value !== "" && bookPages.value) {
+        myLibrary.push(newBook);
+        return myLibrary;
+    }
 }
 
 function createBook() {
     let getBook = addBookToLibrary();
 
-    getBook.forEach((book) => {
+    bookShelf.innerHTML = "";
+
+    getBook.forEach((book, index) => {
         const createBook = document.createElement("div");
         createBook.classList.add("virtual-book");
         createBook.innerHTML = `
-            <h2 class="book-title">${book.title}</h2>
-            <h3 class="book-author">By: ${book.author}</h3>
-            <p class="book-pages">Pages: ${book.pages}</p>
-            <div class="book-controls">
-                <button class="delete" type="button">Delete</button>
-                <button class="read" type="button">${book.isRead ? "Read" : "Not Read"}</button>
-            </div>
+        <h2 class="book-title">${book.title}</h2>
+        <h3 class="book-author">By: ${book.author}</h3>
+        <p class="book-pages">Pages: ${book.pages}</p>
+        <div class="book-controls">
+            <button class="delete" type="button" data-index="${index}">Delete</button>
+            <button class="read" type="button" data-index="${index}">${book.isRead ? "Read" : "Not Read"}</button>
+        </div>
         `;
         bookShelf.appendChild(createBook);
     });
