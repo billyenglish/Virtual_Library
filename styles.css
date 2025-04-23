@@ -6,106 +6,63 @@
     --footer-height: 3rem;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-    list-style-type: none;
-    text-decoration: none;
-}
-
-html, body {
-    height: 100%;
-}
-
 body {
-    font-size: 62.5%;
-    width: 100%;
+    font-family: "Open Sans";
 }
 
 .container {
-    display: grid;
-    grid-template-areas:
-        "header header header header header header"
-        "aside main main main main main"
-        "footer footer footer footer footer footer";
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: var(--header-height) var(--main-height) var(--footer-height);
     height: 100vh;
 }
 
 /* Header Section */
 
 header {
-    outline: 1px solid #000;
-    grid-area: header;
     height: var(--header-height);
-}
-
-nav {
-    border: 1px solid #000;
-    display: flex;
-    align-items: center;
-    height: inherit;
-    justify-content: space-between;
-    padding: 0 2rem;
-}
-
-.nav-logo {
-    font-size: 1.25rem;
-    font-weight: 400;
-}
-
-.hamburger-menu {
-    border: none;
-    background-color: transparent;
-    width: 2.5rem;
-}
-
-.hamburger-menu:hover {
-    cursor: pointer;
-}
-
-.hamburger-menu i {
-    font-size: 1.35rem;
 }
 
 /* Main Section */
 
-main {
-    outline: 1px solid #000;
-    grid-area: main;
-    height: var(--main-height);
-}
-
 /* Aside Section */
-
-aside {
-    outline: 1px solid #000;
-    grid-area: aside;
-}
 
 /* Footer Section */
 
-footer {
-    border: 1px solid #000;
-    grid-area: footer;
-    height: var(--footer-height);
-}
-
-/* dialog modal */
+/* Dialog Modal */
 
 dialog {
-    border: 1px solid #000;
     height: 100%;
     display: flex;
-    right: 0;
+    z-index: 2;
     position: absolute;
-    z-index: 3;
-    min-width: 18rem;
+    top: 0;
+    left: 10rem;
+    min-width: 25rem;
 }
 
+form {
+    border: 1px solid #000;
+}
 
+form div {
+    display: flex;
+    gap: 1rem;
+}
 
+input[type="text"],
+input[type=number] {
+    height: 2rem;
+    width: 18rem;
+}
 
+select {
+    height: 2.5rem;
+    width: 18.5rem;
+}
+
+.form-control-panel {
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+    gap: 3rem;
+}
