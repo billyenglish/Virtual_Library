@@ -6,6 +6,12 @@
     box-sizing: border-box;
 }
 
+:root {
+    --header-height: 5rem;
+    --main-height: calc(100vh - calc(var(--header-height) - var(--footer-height)));
+    --footer-height: 4rem;
+}
+
 /* Body Section */
 
 body {
@@ -17,16 +23,44 @@ body {
 
 .container {
     display: grid;
+    grid-template-areas: 
+        "header header header header header"
+        "aside main main main main"
+        "aside foote footer footer footer";
+    height: 100vh;
+}
+
+header {
+    outline: 1px solid #000;
+    height: var(--header-height);
+    grid-area: header;
+}
+
+main {
+    height: var(--main-height);
+    outline: 1px solid #000;
+    grid-area: main;
+}
+
+aside {
+    outline: 1px solid #000;
+    grid-area: aside;
+}
+
+footer {
+    height: var(--footer-height);
+    grid-area: footer;
 }
 
 /* Dialog Modal */
 
 dialog {
-    height: 100vh;
+    min-height: 113vh;
     top: 0;
     left: 95rem;
     width: 25rem;
     position: absolute;
+    z-index: 3;
 }
 
 .close-menu {
