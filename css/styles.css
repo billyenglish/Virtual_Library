@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Section */
+
+body {
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+}
+
+/* Container Section */
+
+.container {
+    display: grid;
+}
+
+/* Dialog Modal */
+
+dialog {
+    height: 100vh;
+    top: 0;
+    left: 95rem;
+    width: 25rem;
+    position: absolute;
+}
+
+.close-menu {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+.fa-xmark {
+    font-size: 1.35rem;
+}
+
+.dialog-title {
+    font-size: 2rem;
+    font-weight: 250;
+    text-align: center;
+    margin: 6rem 0 0 0;
+    letter-spacing: .2rem;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin: 6rem 0 0 0;
+}
+
+form {
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    padding: 2rem 2.5rem;
+}
+
+form div {
+    display: flex;
+    justify-content: center;
+}
+
+form div:nth-child(5) {
+    padding-bottom: 1rem;
+}
+
+form div:nth-child(6) {
+    padding-bottom: 1rem;
+}
+
+.form-title {
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-align: center;
+    padding: 1rem 0 2rem 0;
+}
+
+input[type=text], input[type=number], select {
+    height: 2.5rem;
+    width: 16rem;
+}
+
+input[type=text]::placeholder, input[type=number]::placeholder {
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: .1rem;
+    padding-left: .2rem;
+    color: #000;
+}
+
+select {
+    font-size: 1.1rem;
+    letter-spacing: .1rem;
+}
+
+.read-label {
+    font-size: .9rem;
+}
+
+.checkbox-read {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:.5rem;
+}
+
+.form-control-panel {
+    display: flex;
+    gap: 4rem;
+}
+
+.form-control-panel button {
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    padding: .1rem .2rem;
+}
+
+.dialog-footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
