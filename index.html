@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Library</title>
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">
+    <script src="https://kit.fontawesome.com/413741196a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            Header
+        </header>
+        <main>
+            Main
+        </main>
+        <aside>
+            Aside
+        </aside>
+        <footer>
+            Footer
+        </footer>
+    </div>
+    <dialog open>
+        <div class="close-menu">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+        <h3 class="dialog-title">Virtaul Library</h3>
+
+        <div class="form-container">
+            <form>
+                <h4 class="form-title">Create Virtual Book</h4>
+
+                <div>
+                    <input type="text" name="title" id="title" placeholder="Title">
+                </div>
+                <div>
+                    <input type="text" name="author" id="author" placeholder="Author">
+                </div>
+                <div>
+                    <select>
+                        <option>Select Genre</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="number" name="pages" id="pages" placeholder="Pages" min="0">
+                </div>
+                <div class="checkbox-read">
+                    <label class="read-label">Have read this book ?
+                        <input type="checkbox" name="read" id="read">
+                    </label>
+                </div>
+                <div class="form-control-panel">
+                    <button>Submit</button>
+                    <button>Cancel</button>
+                </div>
+            </form>
+        </div>
+        <footer class="dialog-footer">
+            <p>&copy;<span class="year"></span> Virtual Library </p>
+        </footer>
+    </dialog>
+</body>
+</html>
