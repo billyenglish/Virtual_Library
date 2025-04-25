@@ -29,7 +29,7 @@ function addBookToLibrary(title = '', author = '', genre = '', pages = '', read 
 
     if (newBook.title !== "" && newBook.author !== "" && newBook !== "" && newBook.pages !== "") {
         myLibrary.push(newBook);
-        duplicateBook(myLibrary);
+        return myLibrary;
     } else {
         myLibrary.push(newBook);
         validateBook(myLibrary);
@@ -38,24 +38,9 @@ function addBookToLibrary(title = '', author = '', genre = '', pages = '', read 
 }
 
 function validateBook(validBook) {
-    validBook.find((book) => {
-        console.log(book);
-    })
+    console.log("Hello World");
+    console.log(validBook);
 }
 
-function duplicateBook(duplicate) {
-    console.log("The Duplicate");
-    const duplicateBook = duplicate.find((dupBook) => boo)
-}
-
-Book.prototype.read = function() {
-    this.read = !this.read;
-    return this.read;
-}
-
-let book = new Book('The', 'J.K. Rawlings', 'Fantasy', 298, true);
+let book = new Book('', 'J.K. Rawlings', 'Fantasy', 298, true);
 let bookDetails = addBookToLibrary(book.title, book.author, book.genre, book.pages, book.read);
-let bookDetails2 = addBookToLibrary(book.title, book.author, book.genre, book.pages, book.read);
-
-
-
