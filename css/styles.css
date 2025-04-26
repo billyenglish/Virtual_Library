@@ -7,8 +7,8 @@
 }
 
 :root {
-    --header-height: 5rem;
-    --main-height: calc(100vh - calc(var(--header-height) - var(--footer-height)));
+    --header-height: 6rem;
+    --main-height: calc(100vh - var(--header-height) - var(--footer-height));
     --footer-height: 4rem;
 }
 
@@ -23,12 +23,14 @@ body {
 
 .container {
     display: grid;
-    grid-template-areas: 
-        "header header header header header"
-        "aside main main main main"
-        "aside foote footer footer footer";
-    height: 100vh;
+    grid-template-areas:
+        "header header header header header header header header header header header header"
+        "aside main main main main main main main main main main main"
+        "aside footer footer footer footer footer footer footer footer footer footer footer";
+    min-height: 100vh;
 }
+
+/* Header Section */
 
 header {
     outline: 1px solid #000;
@@ -36,16 +38,74 @@ header {
     grid-area: header;
 }
 
+.nav-container {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    width: inherit;
+    justify-content: space-between;
+    padding: 0 3rem;
+}
+
+.nav-logo {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.hamburger-menu {
+    font-size: 1.5rem;
+}
+
+.hamburger-menu:hover {
+    cursor: pointer;
+}
+
+/* Main Section */
+
 main {
     height: var(--main-height);
     outline: 1px solid #000;
     grid-area: main;
 }
 
+/* Aside Section */
+
 aside {
     outline: 1px solid #000;
     grid-area: aside;
 }
+
+.nav-aside {
+    border: 1px solid #000;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 2rem 0 0 0;
+}
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 4rem 0 0 3.25rem;
+}
+
+.category-list li {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.category-list li:hover {
+    cursor: pointer;
+}
+
+/* Footer Section */
 
 footer {
     height: var(--footer-height);
@@ -55,12 +115,13 @@ footer {
 /* Dialog Modal */
 
 dialog {
-    min-height: 113vh;
+    min-height: 100%;
     top: 0;
-    left: 95rem;
+    left: 65rem;
     width: 25rem;
     position: absolute;
     z-index: 3;
+    border: none;
 }
 
 .close-menu {
@@ -69,8 +130,12 @@ dialog {
     top: 1rem;
 }
 
+.close-menu:hover {
+    cursor: pointer;
+}
+
 .fa-xmark {
-    font-size: 1.35rem;
+    font-size: 1.5rem;
 }
 
 .dialog-title {
@@ -131,6 +196,14 @@ input[type=text]::placeholder, input[type=number]::placeholder {
 select {
     font-size: 1.1rem;
     letter-spacing: .1rem;
+}
+
+select option {
+    background-color: #f0f0f0;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #333;
+    margin-top: 2rem;
 }
 
 .read-label {
