@@ -5,3 +5,7 @@ node_module
 # dist
 
 dist
+
+# .env file
+
+.env
