@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --header: 6rem;
+    --main: calc(100vh - calc(var(--header) + var(--footer)));
+    --footer: 4rem;
+}
+
+/* Body Section */
+
+body {
+    border: 1px solid #000;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    height: 100vh;
+    min-width: 100%;
+}
+
+/* Container Section */
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "aside header header header header header header header"
+        "aside main main main main main main main"
+        "aside footer footer footer footer footer footer footer";
+}
+
+/* Header Section */
+
+header {
+    border: 1px solid #000;
+    height: var(--header);
+    grid-area: header;
+}
+
+/* Main Section */
+
+main {
+    border: 1px solid #000;
+    grid-area: main;
+    height: var(--main);
+}
+
+/* Aside Section */
+
+aside {
+    border: 1px solid #000;
+    grid-area: aside;
+}
+
+/* Footer Section */
+
+footer {
+    border: 1px solid #000;
+    grid-area: footer;
+    height: var(--footer);
+}
+
