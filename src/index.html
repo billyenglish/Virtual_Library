@@ -8,17 +8,70 @@
 <body>
     <div class="container">
         <header>
-            Header
+            <div class="logo">
+                <h1 id="logo">Virtual Library</h1>
+            </div>
+
+            <div>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
         </header>
         <main>
             Main
         </main>
         <aside>
-            Aside
+            <nav>
+                <div>
+                    <h2>Book Categories</h2>
+
+                    <ul>
+                        <li>All Categories</li>
+                        <ul>
+                            <li>Fiction</li>
+                            <li>Non-Fiction</li>
+                            <li>Science Fiction</li>
+                            <li>Fantasy</li>
+                            <li>Mystery</li>
+                            <li>Biography</li>
+                            <li>History</li>
+                            <li>Children's Books</li>
+                        </ul>
+                    </ul>
+                </div>
+            </nav>
         </aside>
         <footer>
-            Footer
+            <p>&copy; <span>2025</span> Virtual Library. All rights reserved.</p>
         </footer>
+        <dialog>
+            <form>
+                <h2>Create Virtual Book</h2>
+                <div>
+                    <input
+                        type="text"
+                        name="book-title"
+                        id="book-title"
+                        placeholder="Title"
+                    />
+                </div>
+                <div>
+                    <input
+                        type="text"
+                        name=""
+                        id=""
+                        placeholder="Author"
+                    >
+                </div>
+                <div>
+                    <select>
+                        <option>Select Genre</option>
+                    </select>
+                </div>
+            </form>
+        </dialog>
     </div>
 </body>
 </html>
