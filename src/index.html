@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Library</title>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    >
 </head>
 <body>
     <div class="container">
@@ -24,22 +28,71 @@
         </main>
         <aside>
             <nav>
-                <div>
-                    <h2>Book Categories</h2>
+                <div class="nav-section">
+                    <h2>Feature Books</h2>
 
-                    <ul>
-                        <li>All Categories</li>
-                        <ul>
-                            <li>Fiction</li>
-                            <li>Non-Fiction</li>
-                            <li>Science Fiction</li>
-                            <li>Fantasy</li>
-                            <li>Mystery</li>
-                            <li>Biography</li>
-                            <li>History</li>
-                            <li>Children's Books</li>
+                    <div class="nav-list-container">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <i class='bx  bx-book'></i>
+                                New Arrivals
+                            </li>
+                            <li class="nav-item">
+                                <i class='bx  bx-check-square'></i> 
+                                Staff Picks
+                            </li>
+                            <li class="nav-item">
+                                <i class='bx  bx-star'></i>
+                                Top Books
+                            </li>
+                            <li class="nav-item">
+                                <i class='bx  bx-medal'></i>
+                                Award Winners
+                            </li>
+                            <li class="nav-item">
+                                <i class='bx  bx-calendar-star'></i>
+                                Events
+                            </li>
                         </ul>
-                    </ul>
+                    </div>
+                </div>
+
+                <div class="nav-section">
+                    <h2>Categories</h2>
+
+                    <div class="nav-list-container">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <i class='bx  bx-check-square'></i>
+                                Fiction
+                            </li>
+                            <li class="nav-item">
+                                Non-Fiction
+                            </li>
+                            <li class="nav-item">
+                                <i class='bx  bx-rocket'></i> 
+                                Science Fiction
+                            </li>
+                            <li class="nav-item">
+                                <i class='bx  bx-mask'></i>
+                                Fantasy
+                            </li>
+                            <li class="nav-item">
+                                <i class='bx  bx-search-alt'>
+                                </i> Mystery</li>
+                            <li class="nav-item">Biography</li>
+                            <li class="nav-item">
+                                <i class='bx  bx-wrist-watch-round'></i> 
+                                History
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="nav-section">
+                    <button type="button" id="add-new-book">
+                        Add New Book
+                    </button>
                 </div>
             </nav>
         </aside>
@@ -65,7 +118,7 @@
                         placeholder="Author"
                     >
                 </div>
-                <div>
+                <div class="nav-section">
                     <select>
                         <option>Select Genre</option>
                     </select>
