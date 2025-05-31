@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
+    --primary-color: #D7CEC7;
+    --secondary-color-1: #565656;
+    --secondary-color-2: #76323F;
+    --secondary-color-3: #C09F80;
     --header-height: 6rem;
     --main-height: calc(100vh - var(--header-height) - var(--footer-height));
     --aside-height: calc(100vh - var(--header-height) - var(--footer-height));
@@ -42,19 +46,21 @@ body {
 /* Header Section */
 
 header {
-    border: 1px solid #000;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem 2rem;
     height: var(--header-height);
     grid-area: header;
+    background-color: var(--secondary-color-2);
+    color: var(--secondary-color-1);
 }
 
 #logo {
     font-size: 1.5rem;
     font-weight: 300;
     letter-spacing: .1rem;
+    color: var(--secondary-color-3);
 }
 
 /* Toggle Button */
@@ -79,7 +85,7 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: var(--primary-color);
     transition: .4s;
 }
 
@@ -90,7 +96,7 @@ header {
     width: 22px;
     left: 2px;
     bottom: 4px;
-    background-color: white;
+    background-color: var(--secondary-color-3);
     transition: .4s;
 }
 
@@ -117,7 +123,6 @@ input:checked + .slider:before {
 /* Main Section */
 
 main {
-    border: 1px solid #000;
     height: var(--main-height);
     grid-area: main;
 }
@@ -125,17 +130,17 @@ main {
 /* Aside Section */
 
 aside {
-    border: 1px solid #000;
+    background-color: var(--primary-color);
     grid-area: aside;
 }
 
 nav {
-    border: 1px solid #000;
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    color: var(--secondary-color-2);
 }
 
 .nav-section {
@@ -160,33 +165,41 @@ nav h2 {
     display: flex;
     flex-direction: column;
     font-size: 1rem;
-    gap: .75rem;
+    gap: 1rem;
 }
 
 .nav-item {
     display: flex;
     align-items: center;
     gap: .25rem;
+    font-weight: 500;
+}
+
+.nav-item:hover {
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    transform: scale(1.1);
 }
 
 .nav-item i {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .nav-section:nth-child(3) {
-    border: 1px solid #000;
     margin-bottom: 2rem;
     width: 100%;
     text-align: center;
     align-self: center;
 }
 
-
-
 button {
     font-family: Poppins, Arial, Helvetica, sans-serif;
     font-size: 1rem;
     padding: 2px;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 /* Footer Section */
@@ -197,9 +210,10 @@ footer {
     align-items: center;
     justify-content: center;
     height: var(--footer-height);
-    border: 1px solid #000;
     width: 100%;
     grid-area: footer;
+    background-color: var(--secondary-color-2);
+    color: var(--primary-color);
 }
 
 /* Dialog Modal */
