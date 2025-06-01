@@ -101,6 +101,9 @@
         </footer>
         <dialog>
             <form>
+                <div class="close-menu">
+                    <i class='bx bx-x'></i>
+                </div>
                 <h2>Create Virtual Book</h2>
                 <div>
                     <input
@@ -113,15 +116,35 @@
                 <div>
                     <input
                         type="text"
-                        name=""
-                        id=""
+                        name="book-author"
+                        id="book-author"
                         placeholder="Author"
-                    >
+                    />
                 </div>
-                <div class="nav-section">
-                    <select>
+                <div>
+                    <select name="book-genre" id="book-genre">
                         <option>Select Genre</option>
+                        <option value="fiction">Fiction</option>
+                        <option value="non-fiction">Non-Fiction</option>
+                        <option value="science-fiction">Science Fiction</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="mystery">Mystery</option>
+                        <option value="biography">Biography</option>
+                        <option value="history">History</option>
                     </select>
+                </div>
+                <div>
+                    <input
+                        type="number"
+                        name="book-pages"
+                        id="book-pages"
+                        placeholder="Number of Pages: 1"
+                        min="1"
+                    />
+                </div>
+                <div class="control-panel">
+                    <button type="button" id="cancel">Cancel</button>
+                    <button type="button" id="submit">Submit</button>
                 </div>
             </form>
         </dialog>
