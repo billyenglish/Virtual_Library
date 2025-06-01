@@ -1,4 +1,7 @@
 import "./styles.css";
-import { greeting } from "./greeting.js";
 
-console.log(greeting);
+import { openFormModal, closeFormModal } from "./js/formModal.js";
+
+openFormModal;
+
+closeFormModal;
