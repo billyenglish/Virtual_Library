@@ -24,7 +24,47 @@
             </div>
         </header>
         <main>
-            Main
+            <section class="book-section new-arrivals" id="new-arrivals">
+                <h2 class="section-title">New Arrivals</h2>
+
+                <div class="book-container new-arrivals-container">
+                </div>
+            </section>
+            <section class="book-section staff-picks" id="staff-picks">
+                <h2 class="section-title">Staff Picks</h2>
+
+                
+            </section>
+            <section class="book-section top-books" id="top-books">
+                <h2 class="section-title">Top Books</h2>
+            </section>
+            <section class="book-section award-winners" id="award-winners">
+                <h2 class="section-title">Award Winners</h2>
+            </section>
+            <section class="book-section events" id="events">
+                <h2 class="section-title">Upcoming Events</h2>
+            </section>
+            <section class="book-section fiction-books" id="fiction-books">
+                <h2 class="section-title">Fiction Books</h2>
+            </section>
+            <section class="book-section non-fiction" id="non-fiction">
+                <h2 class="section-title">Non-Fiction</h2>
+            </section>
+            <section class="book-section sci-fiction" id="sci-fiction">
+                <h2 class="section-title">Sci-Fiction</h2>
+            </section>
+            <section class="book-section fantasy" id="fantasy">
+                <h2 class="section-title">Fantasy</h2>
+            </section>
+            <section class="book-section mystery" id="mystery">
+                <h2 class="section-title">Mystery</h2>
+            </section>
+            <section class="book-section biography" id="biography">
+                <h2 class="section-title">Biography</h2>
+            </section>
+            <section class="book-section history" id="history">
+                <h2 class="section-title">History</h2>
+            </section>
         </main>
         <aside>
             <nav>
@@ -67,11 +107,12 @@
                                 Fiction
                             </li>
                             <li class="nav-item">
+                                <i class='bx bx-x'></i> 
                                 Non-Fiction
                             </li>
                             <li class="nav-item">
                                 <i class='bx  bx-rocket'></i> 
-                                Science Fiction
+                                Sci-Fiction
                             </li>
                             <li class="nav-item">
                                 <i class='bx  bx-mask'></i>
@@ -80,9 +121,12 @@
                             <li class="nav-item">
                                 <i class='bx  bx-search-alt'>
                                 </i> Mystery</li>
-                            <li class="nav-item">Biography</li>
                             <li class="nav-item">
-                                <i class='bx  bx-wrist-watch-round'></i> 
+                                <i class='bx bx-body'></i> 
+                                Biography
+                            </li>
+                            <li class="nav-item">
+                                <i class='bx bx-history'></i> 
                                 History
                             </li>
                         </ul>
@@ -101,10 +145,12 @@
         </footer>
         <dialog>
             <form>
-                <div class="close-menu">
-                    <i class='bx bx-x'></i>
+                <div class="form-header">
+                    <h2>Create Virtual Book</h2>
+                    <div class="close-menu">
+                        <i class='bx bx-x'></i>
+                    </div>
                 </div>
-                <h2>Create Virtual Book</h2>
                 <div>
                     <input
                         type="text"
@@ -141,6 +187,13 @@
                         placeholder="Number of Pages: 1"
                         min="1"
                     />
+                </div>
+                <div>
+                    <select name="read-book" id="read-book">
+                        <option>Did you read this book?</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
                 </div>
                 <div class="control-panel">
                     <button type="button" id="cancel">Cancel</button>
