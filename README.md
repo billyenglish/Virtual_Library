@@ -1,3 +1,3 @@
-# 📓 Virtual_Library
+# 📓 Virtual Library
 
-<hr>
+<img src="/src/assets/Virtual_Library_Image.png>
