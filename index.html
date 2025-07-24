@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Library</title>
-    <link rel="stylesheet" href="./css/">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/413741196a.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
@@ -14,6 +15,48 @@
         <aside>
             Aside
         </aside>
+        <dialog>
+            <div class="dialog-form">
+                <form>
+                    <div class="close-container">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+
+                        <p class="form-title">Build My Book</p>
+
+                    <div>
+                        <input type="text" name="book-title" id="book-title" placeholder="Book Title">
+                    </div>
+                    <div>
+                        <input type="text" name="book-author" id="book-author" placeholder="Book Author">
+                    </div>
+                    <div>
+                        <input type="number" name="book-pages" id="book-pages" placeholder="Number of Pages: 1">
+                    </div>
+                    <div>
+                        <select>
+                            <option>Select Genre:</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="science_fiction">Science Fiction</option>
+                            <option value="mystery">Mystery</option>
+                            <option value="suspense">Suspense</option>
+                            <option value="horror">Horror</option>
+                            <option value="romance">Romance</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="form-checkbox" for="read">Did you read this book?
+                            <input type="checkbox" name="read" id="read">
+                        </label>
+                    </div>
+                    <div class="form-controls">
+                        <button type="button" id="form-cancel">Cancel</button>
+                        <button type="button" id="form-create">Create</button>
+                    </div>
+                </form>
+            </div>
+        </dialog>
     </div>
+    <script src="./js/script.js"></script>
 </body>
 </html>
