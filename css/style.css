@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Matangi:wght@300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Matangi, Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+}
+
+/* Dialog Modal Section */
+
+dialog {
+    border: 1px solid #000;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+}
+
+.dialog-form {
+    border: 1px solid #000;
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    height: inherit;
+    width: inherit;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Dialog Book Form Section */
+
+form {
+    border: 1px solid #000;
+    height: auto;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border-radius: .25rem;
+    gap: 1rem;
+}
+
+.close-container {
+    display: flex;
+    justify-content: end;
+    padding: 0 1rem 0 0;
+}
+
+.fa-xmark {
+    font-size: 1.25rem;
+}
+
+.form-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: .1rem;
+    margin-bottom: .75rem;
+    align-self: flex-start;
+    margin-left: 1.5rem;
+}
+
+form div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+input[type=text], input[type=number], select {
+    height: 2.5rem;
+    width: 90%;
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.form-controls {
+    display: flex;
+    justify-content: right;
+    gap: .5rem;
+    margin: 0 1rem 0 0;
+}
+
+#read {
+    height: 1rem;
+    width: 1rem;
+}
+
+button {
+    font-family: Matangi, Karla, Poppins, Arial;
+    font-weight: 400;
+}
+
+#form-cancel, #form-create {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0 .25rem;
+}
+
+/* End of Modal Dialog Section */
