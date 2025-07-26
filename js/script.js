@@ -3,66 +3,93 @@ class MyLibrary {
         this.library = [];
     }
 
-    currentLibrary(book) {
+    getMyLibrary(book) {
         this.library.push(book);
-        console.log(this.library);
+        return this.library;
     }
 }
 
-class Book {
-    constructor(title, author, pages, genre, read) {
+class BookForm {
+    constructor(title, author, genre, pages) {
         this.title = title;
         this.author = author;
-        this.pages = pages;
         this.genre = genre;
-        this.read = read;
-        this.id = crypto.randomUUID();
+        this.pages = pages;
+        this.read = false;
+        this.bookId = crypto.randomUUID();
     }
 
     getBookTitle() {
-        console.log(title);
+        return this.title;
     }
+
+    getBookAuthor() {
+        return this.author;
+    }
+
+    getBookGenre() {
+        return this.genre;
+    }
+
+    getBookPages() {
+        return this.pages;
+    }
+
+    getReadStatus() {
+        return this.read;
+    }
+
+    getBookId() {
+        return this.bookId;
+    }
+
+    getBook() {
+        return {
+            title: this.title,
+            author: this.author,
+            genre: this.genre,
+            pages: this.pages,
+            read: this.read,
+            bookId: this.bookId,
+        }
+    }
+
 }
 
-class FormButtons {
-    constructor() {
-        this.create = document.querySelector('#form-create');
-        this.clear = document.querySelector('#form-cancel');
+class ValidateBook {
+    constructor(BookForm) {
+        this.book = BookForm;
+        this.errors = [];
     }
 
-    createButton() {
-        this.create.addEventListener('click', () => {
-            alert('Create');
-        })
-    }
-
-    clearButton() {
-        this.clear.addEventListener('click', () => {
-            alert('Clear');
-        });
-    }
 
 }
+
+let book = new BookForm('The Hobbit', 'J.K Rawlings', 'Fiction', 229, false);
+console.log(book.getBook());
+
+// DOM Logic for UI Interactivity.
 
 class DialogModal {
     constructor() {
-        this.openModal = document.querySelector('#add-book');
-        this.closeModal = document.querySelector('.fa-xmark');
+        this.dialogModal = document.querySelector('dialog');
+        this.closeModal = document.querySelector('#close_form_button');
+        this.openModal = document.querySelector('#create_book_button');
+
+        this.addEventListeners();
     }
 
-    openModal() {
+    addEventListeners() {
+
         this.openModal.addEventListener('click', () => {
+            this.dialogModal.showModal();
+        })
 
-        });
-    }
-
-    closeModal() {
         this.closeModal.addEventListener('click', () => {
-
+            this.dialogModal.close();
         });
+
     }
 }
 
-
-let dialog = new DialogModal();
-dialog
+let dialogController = new DialogModal();
