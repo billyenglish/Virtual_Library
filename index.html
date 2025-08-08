@@ -4,245 +4,192 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Library</title>
-    <link rel="stylesheet" href="./css/style.css" href="text/type">
-    <script src="https://kit.fontawesome.com/413741196a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
 <body>
     <div class="container">
-        <aside class="aside_menu_section" id="aside_menu">
-            <nav class="nav_menu_content">
+        <nav class="nav_menu">
+            <div class="nav_logo_container">
+                <h1 class="nav_logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 3C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21H14C14.5523 21 15 20.5523 15 20V15.2973L15.9995 19.9996C16.1143 20.5398 16.6454 20.8847 17.1856 20.7699L21.0982 19.9382C21.6384 19.8234 21.9832 19.2924 21.8684 18.7522L18.9576 5.0581C18.8428 4.51788 18.3118 4.17304 17.7716 4.28786L14.9927 4.87853C14.9328 4.38353 14.5112 4 14 4H10C10 3.44772 9.55228 3 9 3H4ZM10 6H13V14H10V6ZM10 19V16H13V19H10ZM8 5V15H5V5H8ZM8 17V19H5V17H8ZM17.3321 16.6496L19.2884 16.2338L19.7042 18.1898L17.7479 18.6057L17.3321 16.6496ZM16.9163 14.6933L15.253 6.86789L17.2092 6.45207L18.8726 14.2775L16.9163 14.6933Z"></path></svg>
+                    Virtual Library
+                </h1>
+            </div>
 
-                <div class="nav_logo_container">
-                    <i class="ri-book-shelf-line"></i>
-                    <h1 class="nav_logo_title">Virtual Library</h1>
-                </div>
-
-                <div class="nav_menu_section">
-                    <ul class="nav_list">
-                        <li class="nav_item home_item">
-                            <button type="button" id="home-button">
-                                <i class="ri-home-9-fill"></i>
-                                Home
-                            </button>
-                        </li>
-                        <li class="nav_item my_library_item">
-                            <button type="button" id="my_library_button">
-                                <i class="ri-book-shelf-line"></i>
-                                My Library
-                            </button>
-                        </li>
-                        <li class="nav_item genre_item">
-                            <button type="button" id="genre_button">
-                                <i class="ri-book-2-fill"></i>
-                                Genre
-                            </button>
-                        </li>
-                        <li class="nav_item nav_favorite">
-                            <button type="button" id="favorite_button">
-                                <i class="ri-star-fill"></i>
-                                Favorite
-                            </button>
-                        </li>
-                        <li class="nav_item nav_history">
-                            <button type="button" id="history_button">
-                                <i class="ri-history-fill"></i>
-                                History
-                            </button>
-                        </li>
-                        <li class="nav_item nav_currently_reading">
-                            <button type="button" id="currently_reading_button">
-                                <i class="ri-book-open-fill"></i>
-                                Currently Reading
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="nav_menu_create_book">
-                    <ul class="nav_list">
-                        <li class="nav_item create_book">
-                            <button type="button" id="create_book_button">
-                                <i class="ri-add-circle-fill"></i>
-                                Create Book
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="nav_menu_settings">
-                    <ul class="nav_list">
-                        <li class="nav_item nav_settings">
-                            <button type="button" id="button_settings">
-                                <i class="ri-settings-3-fill"></i>
-                                Settings
-                            </button>
-                        </li>
-                        <li class="nav_item nav_settings">
-                            <button type="button" id="button_profile">
-                                <i class='bx bx-user-circle'></i> 
-                                Profile
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-
-                <footer class="nav_footer">
-                    <p>Virtual Library</p>
-                    <p>Created By Billy English</p>
-                </footer>
-            </nav>
-        </aside>
-        <main class="main_content" id="main_section">
-            <section class="my_library_section">
-                <h2 class="section_title">Home</h2>
-
-                <div class="my_library_shelf">
-
-                    <article class="book_shelf_card">
-                        <header class="book_header">
-                            <h3 class="book_title">The Great Gatsby</h3>
-                            <p class="book_pages">Pages: 298</p>
-                        </header>
-                        <hr>
-                        <div class="book_meta">
-                            <h4 class="book_author">Author F. Scott Fitzgerald</h4>
-                            <p class="book_genre">Genre: Fiction</p>
+            <div>
+                <button class="theme_toggle_btn" id="theme_toggle_btn" aria-label="Toggle Dark/Light Theme">
+                    <i class="ri-moon-fill"></i>
+                </button>
+            </div>
+        </nav>
+        <main>
+            <section class="book_shelf_section">
+                <div class="book_shelf_container">
+                    <div class="book_card" data-book-key"">
+                        <div class="book_image">
+                            <img
+                                src="https://placehold.co/600x400"
+                                alt="Book Cover"
+                                class="book_cover">
                         </div>
-                        <footer>
-                            <div class="book_card_controls">
-                                <button type="button" class="book_read">Read</button>
-                                <button type="button" class="book_delete">Delete</button>
+                        <div class="book_card_content">
+                            <div class="book_card_header">
+                                <h2 class="book_title">Book Title</h2>
+                                <p class="book_pages">Pages: <span>298</span></p>
                             </div>
-                            <p class="reading_status">In Progress</p>
-                        </footer>
-                    </article>
-
-                    <article class="book_shelf_card">
-                        <header class="book_header">
-                            <h3 class="book_title">The Great Gatsby</h3>
-                            <p class="book_pages">Pages: 298</p>
-                        </header>
-                        <hr>
-                        <div class="book_meta">
-                            <h4 class="book_author">Author F. Scott Fitzgerald</h4>
-                            <p class="book_genre">Genre: Fiction</p>
+                            <hr>
+                            <p class="book_author">by <span class="author">Author Name</span></p>
+                            <p class="book_genre">Book Genre</p>
+                            <div class="book_card_controls_panel">
+                                <button type="button" id="book_read_button">
+                                    Read
+                                </button>
+                                <button type="button" id="book_read_delete">
+                                    Delete
+                                </button>
+                            </div>
+                            <hr>
+                            <div class="book_progress_container">
+                                <p class="book_progress_status">In progess</p>
+                            </div>
                         </div>
-                        <footer>
-                            <div class="book_card_controls">
-                                <button type="button" class="book_read">Read</button>
-                                <button type="button" class="book_delete">Delete</button>
-                            </div>
-                            <p class="reading_status">In Progress</p>
-                        </footer>
-                    </article>
-
-                    <article class="book_shelf_card">
-                        <header class="book_header">
-                            <h3 class="book_title">The Great Gatsby</h3>
-                            <p class="book_pages">Pages: 298</p>
-                        </header>
-                        <hr>
-                        <div class="book_meta">
-                            <h4 class="book_author">Author F. Scott Fitzgerald</h4>
-                            <p class="book_genre">Genre: Fiction</p>
+                    </div>
+                    <div class="book_card" data-book-key"">
+                        <div class="book_image">
+                            <img
+                                src="https://placehold.co/600x400"
+                                alt="Book Cover"
+                                class="book_cover">
                         </div>
-                        <footer>
-                            <div class="book_card_controls">
-                                <button type="button" class="book_read">Read</button>
-                                <button type="button" class="book_delete">Delete</button>
+                        <div class="book_card_content">
+                            <div class="book_card_header">
+                                <h2 class="book_title">Book Title</h2>
+                                <p class="book_pages">Pages: <span>298</span></p>
                             </div>
-                            <p class="reading_status">In Progress</p>
-                        </footer>
-                    </article>
-
-                    <article class="book_shelf_card">
-                        <header class="book_header">
-                            <h3 class="book_title">The Great Gatsby</h3>
-                            <p class="book_pages">Pages: 298</p>
-                        </header>
-                        <hr>
-                        <div class="book_meta">
-                            <h4 class="book_author">Author F. Scott Fitzgerald</h4>
-                            <p class="book_genre">Genre: Fiction</p>
+                            <hr>
+                            <p class="book_author">by <span class="author">Author Name</span></p>
+                            <p class="book_genre">Book Genre</p>
+                            <div class="book_card_controls_panel">
+                                <button type="button" id="book_read_button">
+                                    Read
+                                </button>
+                                <button type="button" id="book_read_delete">
+                                    Delete
+                                </button>
+                            </div>
+                            <hr>
+                            <div class="book_progress_container">
+                                <p class="book_progress_status">In progess</p>
+                            </div>
                         </div>
-                        <footer>
-                            <div class="book_card_controls">
-                                <button type="button" class="book_read">Read</button>
-                                <button type="button" class="book_delete">Delete</button>
-                            </div>
-                            <p class="reading_status">In Progress</p>
-                        </footer>
-                    </article>
-
-                    <article class="book_shelf_card">
-                        <header class="book_header">
-                            <h3 class="book_title">The Great Gatsby</h3>
-                            <p class="book_pages">Pages: 298</p>
-                        </header>
-                        <hr>
-                        <div class="book_meta">
-                            <h4 class="book_author">Author F. Scott Fitzgerald</h4>
-                            <p class="book_genre">Genre: Fiction</p>
+                    </div>
+                    <div class="book_card" data-book-key"">
+                        <div class="book_image">
+                            <img
+                                src="https://placehold.co/600x400"
+                                alt="Book Cover"
+                                class="book_cover">
                         </div>
-                        <footer>
-                            <div class="book_card_controls">
-                                <button type="button" class="book_read">Read</button>
-                                <button type="button" class="book_delete">Delete</button>
+                        <div class="book_card_content">
+                            <div class="book_card_header">
+                                <h2 class="book_title">Book Title</h2>
+                                <p class="book_pages">Pages: <span>298</span></p>
                             </div>
-                            <p class="reading_status">In Progress</p>
-                        </footer>
-                    </article>
-
+                            <hr>
+                            <p class="book_author">by <span class="author">Author Name</span></p>
+                            <p class="book_genre">Book Genre</p>
+                            <div class="book_card_controls_panel">
+                                <button type="button" id="book_read_button">
+                                    Read
+                                </button>
+                                <button type="button" id="book_read_delete">
+                                    Delete
+                                </button>
+                            </div>
+                            <hr>
+                            <div class="book_progress_container">
+                                <p class="book_progress_status">In progess</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book_card" data-book-key"">
+                        <div class="book_image">
+                            <img
+                                src="https://placehold.co/600x400"
+                                alt="Book Cover"
+                                class="book_cover">
+                        </div>
+                        <div class="book_card_content">
+                            <div class="book_card_header">
+                                <h2 class="book_title">Book Title</h2>
+                                <p class="book_pages">Pages: <span>298</span></p>
+                            </div>
+                            <hr>
+                            <p class="book_author">by <span class="author">Author Name</span></p>
+                            <p class="book_genre">Book Genre</p>
+                            <div class="book_card_controls_panel">
+                                <button type="button" id="book_read_button">
+                                    Read
+                                </button>
+                                <button type="button" id="book_read_delete">
+                                    Delete
+                                </button>
+                            </div>
+                            <hr>
+                            <div class="book_progress_container">
+                                <p class="book_progress_status">In progess</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
+            <div>
+                <button class="add_book_btn" id="add_book_btn" aria-label="Add Book">
+                    <i class="ri-add-fill"></i>
+                </button>
+            </div>
         </main>
+        <footer>
+            <p class="footer_text">
+                &copy; <span class="year">2023</span> Virtual Library. All rights reserved.
+                <a href="#" aria-label="GitHub" class="social_link">
+                    <i class="ri-github-fill"></i>
+                </a>
+            </p>        
+        </footer>
     </div>
-
-    <dialog class="book_form_dialog">
+    <dialog>
         <div class="book_form_container">
-            <form class="book_form">
-                <div class="close_button_container">
-                    <button type="button" class="close_form_button" id="close_form_button">
-                        <i class="ri-close-large-line"></i>
-                    </button>
+            <form class="book_form" id="book_form">
+
+                <h2 class="book_form_title">Virtual Form</h2>
+
+                <div>
+                    <input type="text" name="book_title" id="book_title" placeholder="Title" required>
                 </div>
-
-                <h2 class="book_form_title">Create Virtual Book</h2>
-
-                <div class="book_title book_input">
-                    <input type="text" name="book_title" id="book_title" placeholder="Book Title" required>
+                <div>
+                    <input type="text" name="book_author" id="book_author" placeholder="Author" required>
                 </div>
-
-                <div class="book_author book_input">
-                    <input type="text" name="book_author" id="book_author" placeholder="Book Author" required>
-                </div>
-
-                <div class="book_genre book_input">
-                    <select name="book_genre" id="book_genre" required>
-                        <option value="" disabled selected>Select Genre</option>
-                        <option value="fantasy">Fantasy</option>
-                        <option value="horror">Horror</option>
-                        <option value="mystery">Mystery</option>
-                        <option value="science fiction">Science Fiction</option>
-                        <option value="romance">Romance</option>
+                <div>
+                    <select name="book_genre" id="book_genre">
+                        <option checked>Select Genre</option>
                     </select>
                 </div>
-
-                <div class="book_pages book_input">
-                    <input type="number" name="book_pages" id="book_pages" placeholder="Book Pages" min="0" required>
+                <div>
+                    <input type="number" name="book_pages" id="book_pages" placeholder="Number of Pages" required>
                 </div>
-
-                <div class="book_read book_input">
-                    <label class="label_book_read" for="book_read">Did you read this book?
-                        <input type="checkbox" name="book_read" id="book_read" value="yes">
+                <div>
+                    <input type="url" name="book_cover" id="book_cover" placeholder="Book Cover URL">
+                </div>
+                <div class="book_progress_container">
+                    <label class="book_progress" for="book_progress">Did you read this book?
+                        <input type="checkbox" name="book_progress" id="book_progress">
                     </label>
                 </div>
-
-                <div class="form_controls book_input">
-                    <button type="button" id="clear_button">Clear</button>
-                    <button type="button" id="create_button">Create</button>
+                <div class="book_form_controls">
+                    <button type="submit" id="book_form_submit">Add Book</button>
+                    <button type="button" id="book_form_cancel">Cancel</button>
                 </div>
             </form>
         </div>
