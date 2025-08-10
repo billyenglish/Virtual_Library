@@ -49,9 +49,11 @@ console.log(library.validateBook(book));
 
 class DialogModal {
     constructor() {
+        this.closeFormButton = document.querySelector('#close_form_button');
         this.addBookButton = document.querySelector('#add_book_btn');
         this.dialogModal = document.querySelector('dialog');
 
+        this.handleCloseFormButton = this.handleCloseFormButton.bind(this);
         this.handleAddBookButton = this.handleAddBookButton.bind(this);
         this.handleEventListener();
     }
@@ -61,13 +63,23 @@ class DialogModal {
         this.dialogModal.showModal();
     }
 
+    handleCloseFormButton(e) {
+        e.preventDefault();
+        this.dialogModal.close();
+    }
+
     handleEventListener() {
-        if (this.addBookButton) {
-            this.addBookButton.addEventListener('click', this.handleAddBookButton)
-        }
+        this.addBookButton.addEventListener('click', this.handleAddBookButton);
+        this.closeFormButton.addEventListener('click', this.handleCloseFormButton);
     }
 
 }
 
 const dialogModal = new DialogModal();
 dialogModal.handleEventListener();
+
+class LightDarkMode {
+    constructor() {
+        
+    }
+}
