@@ -7,7 +7,12 @@
     font-family: 'Karla';
 }
 
+:root {
+    --background-color: #F0EAD6;
+}
+
 html, body {
+    scroll-behavior: smooth;
     height: 100%;
     width: 100%;
 }
@@ -16,6 +21,7 @@ html, body {
 
 body {
     font-size: 62.5%;
+    background-color: var(--background-color);
 }
 
 /* Nav Section */
@@ -224,23 +230,34 @@ dialog[open]::backdrop {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    height: 100%;
-    width: 100%;
-    top: 50%;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
 }
 
 .book_form {
     border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    border-radius: .25rem; 
     padding: 1rem 2rem;
     height: auto;
     width: auto;
 }
 
-.book_form {
+.close_book_form_container {
     display: flex;
-    flex-direction: column;
-    gap: .75rem;
-    border-radius: .25rem; 
+    justify-content: end;
+}
+
+.close_form_button {
+    border: none;
+    background: transparent;
+}
+
+.close_icon {
+    font-size: 1.75rem;
 }
 
 .book_form_title {
