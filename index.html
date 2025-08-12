@@ -144,9 +144,9 @@
                     </div>
                 </div>
             </section>
-            <div>
+            <div class="add_book_button_container">
                 <button class="add_book_btn" id="add_book_btn" aria-label="Add Book">
-                    <i class="ri-add-fill"></i>
+                    +
                 </button>
             </div>
         </main>
@@ -178,7 +178,8 @@
                 </div>
                 <div>
                     <select name="book_genre" id="book_genre">
-                        <option checked>Select Genre</option>
+                        <option checked aria-required="true">Select Genre</option>
+                        <option value="science-fiction">Science Fiction</option>
                     </select>
                 </div>
                 <div>
