@@ -47,6 +47,17 @@ let book = new Book('', '', '' , '');
 let library = new Library();
 console.log(library.validateBook(book));
 
+class BookForm {
+    constructor() {
+        this.bookTitle = document.querySelector('#book_title');
+        this.bookAuthor = document.querySelector('#book_author');
+        this.bookGenre = document.querySelector('#book_genre');
+        this.bookPages = document.querySelector('#book_pages');
+        this.bookCover = document.querySelector('#book_cover');
+        this.bookProgress = document.querySelector('#book_progress');
+    }
+}
+
 class DialogModal {
     constructor() {
         this.closeFormButton = document.querySelector('#close_form_button');
@@ -80,6 +91,27 @@ dialogModal.handleEventListener();
 
 class LightDarkMode {
     constructor() {
-        
+        this.lightDarkMode = document.querySelector('#theme_toggle_btn');
+
+        this.toggleLightDarkMode = this.toggleLightDarkMode.bind(this);
+    }
+
+    toggleLightDarkMode() {
+        const lightDarkIcon = this.lightDarkMode.querySelector('i');
+
+        if (lightDarkIcon.classList.contains('ri-moon-fill')) {
+            lightDarkIcon.classList.add('ri-sun-fill');
+            lightDarkIcon.classList.remove('ri-moon-fill');
+        } else {
+            lightDarkIcon.classList.add('ri-moon-fill');
+            lightDarkIcon.classList.remove('ri-sun-fill');
+        }
+    }
+
+    handleEventListener() {
+        this.lightDarkMode.addEventListener('click', this.toggleLightDarkMode);
     }
 }
+
+let lightDarkMode = new LightDarkMode();
+lightDarkMode.handleEventListener();
