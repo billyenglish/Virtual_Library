@@ -211,8 +211,8 @@ hr {
 
 .add_book_btn {
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
+    bottom: 5rem;
+    right: 3rem;
     background-color: var(--background-color);
     color: var(--secondary-text);
     border: none;
