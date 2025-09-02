@@ -17,26 +17,27 @@ class Library {
     }
 
     addBook(title, author, pages, genre, images) {
-        const newBook = new Book(title, author, pages, genre, images);
-
-        newBook.title !== "" &&
-        newBook.author !== "" &&
-        newBook.pages > 0 &&
-        newBook.genre !== ""
-            ? this.library.push(newBook)
-            : "Please fill in all fields correctly";
+        
+        if (title !== "" && author !== "" && pages > 0 && genre !== "") {
+            const newBook = new Book(title, author, pages, genre, images);
+            this.library.push(newBook);
+        } else {
+            console.log("Please fill out all fields correctly");
+        }
     }
 
-    bookDupllicate() {
+    bookDuplicate() {
         const currentLibrary = [];
 
-        const uniqueBooks = this.library.map((myLibrary) => {
-            if (currentLibrary.hasOwnProperty(myLibrary)) {
-                currentLibrary.push(myLibrary);
+        for (const book of this.library) {
+            if (!currentLibrary.some(currentBook => currentBook.title === book.title && currentBook.author === book.author)) {
+                currentLibrary.push(book);
+            } else {
+                console.log(`Duplicate book found: ${book.title}`);
             }
-        });
+        }
 
-        return uniqueBooks;
+        return currentLibrary;
     }
 
 }
@@ -47,4 +48,10 @@ myLibrary.addBook("The Hobbit", "J.R.R. Tolkien", 295, "Fantasy", 'Image');
 myLibrary.addBook("1984", "George Orwell", 328, "Dystopian", 'Image');
 myLibrary.addBook("To Kill a Mockingbird", "Harper Lee", 281, "Fiction", 'Image');
 myLibrary.addBook("", "Unknown Author", 150, "Mystery", 'Image');
-console.log(myLibrary.bookDupllicate());
+console.log(myLibrary.bookDuplicate());
+
+class UIModalDialog {
+    constructor() {
+        
+    }
+}
