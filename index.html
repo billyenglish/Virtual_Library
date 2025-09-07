@@ -26,7 +26,7 @@
         <main>
             <section class="book_shelf_section">
                 <div class="book_shelf_container">
-                    <div class="book_card" data-book-key"">
+                    <div class="book_card" data-book-key="">
                         <div class="book_image">
                             <img
                                 src="https://placehold.co/600x400"
@@ -55,7 +55,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="book_card" data-book-key"">
+                    <div class="book_card" data-book-key="">
                         <div class="book_image">
                             <img
                                 src="https://placehold.co/600x400"
@@ -84,7 +84,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="book_card" data-book-key"">
+                    <div class="book_card" data-book-key="">
                         <div class="book_image">
                             <img
                                 src="https://placehold.co/600x400"
@@ -113,7 +113,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="book_card" data-book-key"">
+                    <div class="book_card" data-book-key="">
                         <div class="book_image">
                             <img
                                 src="https://placehold.co/600x400"
@@ -159,11 +159,11 @@
             </p>
         </footer>
     </div>
-    <dialog open>
+    <dialog id="dialog">
         <div class="book_form_container">
             <form class="book_form" id="book_form">
                 <div class="close_book_form_container">
-                    <button type="button" class="close_form_button" id="close_form_button">
+                    <button type="button" class="close_form_button" id="close_form_btn">
                         <i class="ri-close-fill close_icon"></i>
                     </button>
                 </div>
@@ -180,10 +180,11 @@
                     <select name="book_genre" id="book_genre">
                         <option checked aria-required="true">Select Genre</option>
                         <option value="science-fiction">Science Fiction</option>
+                        <option value="horror">Horror</option>
                     </select>
                 </div>
                 <div>
-                    <input type="number" name="book_pages" id="book_pages" placeholder="Number of Pages" required>
+                    <input type="number" name="book_pages" id="book_pages" min="0" placeholder="Number of Pages" required>
                 </div>
                 <div>
                     <input type="url" name="book_cover" id="book_cover" placeholder="Book Cover URL">
@@ -194,7 +195,7 @@
                     </label>
                 </div>
                 <div class="book_form_controls">
-                    <button type="submit" id="book_form_submit">Add Book</button>
+                    <button type="button" id="book_form_submit">Submit</button>
                     <button type="button" id="book_form_cancel">Cancel</button>
                 </div>
             </form>
