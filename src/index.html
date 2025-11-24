@@ -124,7 +124,7 @@
                     <div>
                         <ul class="header_list">
                             <li class="header_list_items">
-                                <button class="add_book_button">
+                                <button class="add_book_button" id="open_dialog_btn">
                                     Add Book
                                 </button>
                             </li>
@@ -144,83 +144,6 @@
             </section>
             <section id="section_main">
                 <div class="bookshelf_container">
-                    <div class="current_book">
-                        <div class="title_container">
-                            <h3 class="current_book_title">
-                                The Hobbit
-                            </h3>
-                        </div>
-
-                        <div class="author_container">
-                            <h4 class="author_title">
-                                by J.R.R Tolkien
-                            </h4>
-                        </div>
-
-                        <div class="genre_container">
-                            <h5 class="genre_title">
-                                Genre: <span class="genre">Fantasy</span>
-                            </h5>
-                        </div>
-
-                        <div class="year_published_container">
-                            <h6 class="year_published_title">
-                                Published Date: <span class="published_date">
-                                    1937
-                                </span>
-                            </h6>
-                        </div>
-
-                        <div class="pages_container">
-                            <p class="book_pages">
-                                Pages: <span class="pages">300</span>
-                            </p>
-                        </div>
-
-                        <div class="current_book_control_panel">
-                            <button>Delete</button>
-                            <button>Read</button>
-                        </div>
-                    </div>
-
-                    <div class="current_book">
-                        <div class="title_container">
-                            <h3 class="current_book_title">
-                                The Hobbit
-                            </h3>
-                        </div>
-
-                        <div class="author_container">
-                            <h4 class="author_title">
-                                by J.R.R Tolkien
-                            </h4>
-                        </div>
-
-                        <div class="genre_container">
-                            <h5 class="genre_title">
-                                Genre: <span class="genre">Fantasy</span>
-                            </h5>
-                        </div>
-
-                        <div class="year_published_container">
-                            <h6 class="year_published_title">
-                                Published Date: <span class="published_date">
-                                    1937
-                                </span>
-                            </h6>
-                        </div>
-
-                        <div class="pages_container">
-                            <p class="book_pages">
-                                Pages: <span class="pages">300</span>
-                            </p>
-                        </div>
-
-                        <div class="current_book_control_panel">
-                            <button>Delete</button>
-                            <button>Read</button>
-                        </div>
-                    </div>
                 </div>
             </section>
         </main>
@@ -230,7 +153,7 @@
             </p>
         </footer>
     </div>
-    <dialog id="book_dialog">
+    <dialog open id="book_dialog">
         <div id="book_form_container">
             <form id="book_form">
                 <div id="form_header">
