@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShelfSpace</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+        rel="stylesheet"
+    />
+</head>
+<body>
+    <div id="container">
+        <nav id="nav_menu">
+            <div id="logo_container">
+                <i class="ri-remix-fill"></i>
+                <h1 id="nav_logo">
+                    ShelfSpace
+                </h1>
+            </div>
+
+            <div id="nav_menu_list_container">
+                <div>
+                    <ul class="nav_list">
+                        <li class="nav_items">
+                            <button class="nav_items_button">
+                                Home
+                                <i class="ri-arrow-right-s-fill"></i>
+                            </button>
+                        </li>
+                        <li class="nav_items">
+                            <button class="nav_items_button">
+                                My Books
+                                <i class="ri-arrow-right-s-fill"></i>
+                            </button>
+                        </li>
+                        <li class="nav_items genres">
+                            <button class="nav_items_button">
+                                Genres
+                                <i class="ri-arrow-right-s-fill"></i>
+                            </button>
+                            <ul class="nav_sublist">
+                                <li class="nav_items">
+                                    <button>
+                                        Fantasy
+                                    </button>
+                                </li>
+                                <li class="nav_items">
+                                    <button>
+                                        Science Fiction
+                                    </button>
+                                </li>
+                                <li class="nav_items">
+                                    <button>
+                                        Mystery
+                                    </button>
+                                </li>
+                                <li class="nav_items">
+                                    <button>
+                                    </button>
+                                </li>
+                                <li class="nav_items">
+                                    <button>
+
+                                    </button>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav_items">
+                            <button class="nav_items_button">
+                                Favorites
+                                <i class="ri-arrow-right-s-fill"></i>
+                            </button>
+                        </li>
+                        <li class="nav_items">
+                            <button class="nav_items_button">
+                                Lists
+                                <i class="ri-arrow-right-s-fill"></i>
+                            </button>
+                        </li>
+                        <li class="nav_items">
+                            <button class="nav_items_button">
+                                Finished
+                                <i class="ri-arrow-right-s-fill"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="nav_list">
+                        <li class="nav_items">
+                            <button class="nav_items_button">
+                                Profile
+                                <i class="ri-arrow-right-s-fill"></i>
+                            </button>
+                        </li>
+                        <li class="nav_items">
+                            <button class="nav_items_button">
+                                Settings
+                                <i class="ri-arrow-right-s-fill"></i>
+                            </button>
+                        </li>
+                        <li class="nav_items">
+                            <button class="nav_items_button">
+                                Support
+                                <i class="ri-arrow-right-s-fill"></i>
+                            </button>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <section>
+                <header id="header_section">
+                    <div>
+                        <div class="search_container">
+                            <input type="text" name="search_input" class="search_input" id="search_input" placeholder="Search">
+                            <i class="ri-search-line"></i>
+                        </div>
+                    </div>
+
+                    <div>
+                        <ul class="header_list">
+                            <li class="header_list_items">
+                                <button class="add_book_button">
+                                    Add Book
+                                </button>
+                            </li>
+                            <li class="header_list_items">
+                                <button class="header_button">
+                                    <i class="ri-sun-line"></i>
+                                </button>
+                            </li>
+                            <li class="header_list_items">
+                                <button class="header_button">
+                                    <i class="ri-account-circle-line"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+            </section>
+            <section id="section_main">
+                <div class="bookshelf_container">
+                    <div class="current_book">
+                        <div class="title_container">
+                            <h3 class="current_book_title">
+                                The Hobbit
+                            </h3>
+                        </div>
+
+                        <div class="author_container">
+                            <h4 class="author_title">
+                                by J.R.R Tolkien
+                            </h4>
+                        </div>
+
+                        <div class="genre_container">
+                            <h5 class="genre_title">
+                                Genre: <span class="genre">Fantasy</span>
+                            </h5>
+                        </div>
+
+                        <div class="year_published_container">
+                            <h6 class="year_published_title">
+                                Published Date: <span class="published_date">
+                                    1937
+                                </span>
+                            </h6>
+                        </div>
+
+                        <div class="pages_container">
+                            <p class="book_pages">
+                                Pages: <span class="pages">300</span>
+                            </p>
+                        </div>
+
+                        <div class="current_book_control_panel">
+                            <button>Delete</button>
+                            <button>Read</button>
+                        </div>
+                    </div>
+
+                    <div class="current_book">
+                        <div class="title_container">
+                            <h3 class="current_book_title">
+                                The Hobbit
+                            </h3>
+                        </div>
+
+                        <div class="author_container">
+                            <h4 class="author_title">
+                                by J.R.R Tolkien
+                            </h4>
+                        </div>
+
+                        <div class="genre_container">
+                            <h5 class="genre_title">
+                                Genre: <span class="genre">Fantasy</span>
+                            </h5>
+                        </div>
+
+                        <div class="year_published_container">
+                            <h6 class="year_published_title">
+                                Published Date: <span class="published_date">
+                                    1937
+                                </span>
+                            </h6>
+                        </div>
+
+                        <div class="pages_container">
+                            <p class="book_pages">
+                                Pages: <span class="pages">300</span>
+                            </p>
+                        </div>
+
+                        <div class="current_book_control_panel">
+                            <button>Delete</button>
+                            <button>Read</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p id="footer_paragraph">
+                &copy; <span>2025</span> ShelfSpace. Built by Billy English.
+            </p>
+        </footer>
+    </div>
+    <dialog id="book_dialog">
+        <div id="book_form_container">
+            <form id="book_form">
+                <div id="form_header">
+                    <div>
+                        <h3 id="form_title">
+                            ShelfSpace
+                        </h3>
+                    </div>
+
+                    <div>
+                        <button class="close_form_button">
+                            <i class="ri-close-line"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="form_section">
+                    <input type="text" name="book_title" id="book_title" placeholder="Book Title">
+
+                    <input type="text" name="book_author" id="book_author" placeholder="Book Author">
+                </div>
+                <div class="form_section">
+                    <select name="" id="">
+                        <option aria-checked="true">Select Genre</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+
+                    <input type="number" name="book_pages" id="book_pages" placeholder="Number of Pages" min="0">
+                </div>
+                <div class="form_section">
+                    <input type="text" name="book_art" id="book_art" placeholder="Book Art Url">
+                </div>
+                <div class="form_section reading_status_section">
+                    <label class="reading_status_label" for="reading_status">
+                        Reading Status
+                        <input type="checkbox" name="reading_status" class="reading_status" id="reading_status">
+                    </label>
+                </div>
+                <div class="form_section form_control_panel">
+                    <button type="button" class="create_book_form">
+                        Cancel
+                    </button>
+                    <button type="button" class="create_book_form">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </dialog>
+</body>
+</html>
